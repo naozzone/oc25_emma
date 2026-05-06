@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://bwfdlp85pb0ep"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_k6wkb"]
+albedo_color = Color(0, 0, 0, 1)
+
+[node name="Serveur" type="Node3D" unique_id=282979465]
+
+[node name="CSGCombiner3D" type="CSGCombiner3D" parent="." unique_id=675368493]
+
+[node name="Extérieur" type="CSGBox3D" parent="CSGCombiner3D" unique_id=2069488840]
+size = Vector3(1.5, 2.5, 1)
+
+[node name="Intérieur" type="CSGBox3D" parent="CSGCombiner3D" unique_id=1775388610]
+size = Vector3(1.3, 2.2, 1.01)
+material = SubResource("StandardMaterial3D_k6wkb")
