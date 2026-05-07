@@ -10,3 +10,5 @@ Environ 1 slide par minute.
 
 
 (Pour rappel : vidéo "Chaque concept 3D expliqué (les bases)" et autre, sur site du prof)
+
+Vertices ? Vortex ? = sommets ?
