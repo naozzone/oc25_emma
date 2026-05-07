@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://bkorafkskqvlk"]
+
+[node name="DataCenter" type="CSGCombiner3D" unique_id=683001788]
+use_collision = true
+
+[node name="Sol" type="CSGBox3D" parent="." unique_id=1654696488]
+use_collision = true
+size = Vector3(200, 1, 200)
+
+[node name="Mur" type="CSGBox3D" parent="." unique_id=580468049]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.5524206, 99.51033)
+size = Vector3(200, 10, 1)
+
+[node name="Mur2" type="CSGBox3D" parent="." unique_id=2014039412]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.5524206, -99.50173)
+size = Vector3(200, 10, 1)
+
+[node name="Mur3" type="CSGBox3D" parent="." unique_id=1415559434]
+transform = Transform3D(6.979285e-05, 0, -1, 0, 1, 0, 1, 0, 6.979285e-05, 99.53542, 4.5524206, -0.47094727)
+size = Vector3(200, 10, 1)
+
+[node name="Mur4" type="CSGBox3D" parent="." unique_id=1327117183]
+transform = Transform3D(6.979285e-05, 0, -1, 0, 1, 0, 1, 0, 6.979285e-05, -100.37959, 4.5524206, -0.47094727)
+size = Vector3(200, 10, 1)
