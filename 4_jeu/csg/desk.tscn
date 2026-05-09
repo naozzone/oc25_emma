@@ -67,7 +67,6 @@ _surfaces = [{
 
 [node name="desk" type="CSGCombiner3D" parent="." unique_id=2144278896]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.4, 0)
-visible = false
 
 [node name="CSGBox3D" type="CSGBox3D" parent="desk" unique_id=580713241]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, -3, -3.5)

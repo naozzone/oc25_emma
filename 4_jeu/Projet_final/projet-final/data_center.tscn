@@ -3,6 +3,21 @@
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xkuxl"]
 albedo_color = Color(0.5154445, 0.33673406, 0.11010771, 1)
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cj5kg"]
+albedo_color = Color(0.22352941, 0.15686275, 0.039215688, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5d6jn"]
+albedo_color = Color(0.22352941, 0.15686275, 0.039215688, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0g4tx"]
+albedo_color = Color(0.22352941, 0.15686275, 0.039215688, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lap4s"]
+albedo_color = Color(0.22352941, 0.15686275, 0.039215688, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fr782"]
+albedo_color = Color(0.22352941, 0.15686275, 0.039215688, 1)
+
 [node name="DataCenter" type="CSGCombiner3D" unique_id=683001788]
 use_collision = true
 
@@ -69,3 +84,31 @@ size = Vector3(20, 10, 1)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -4.001582, 0)
 operation = 2
 size = Vector3(1.2, 2, 1)
+
+[node name="CSGCombiner3D" type="CSGCombiner3D" parent="Salles" unique_id=1304722987]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.858762, 0)
+
+[node name="Pied" type="CSGBox3D" parent="Salles/CSGCombiner3D" unique_id=1905442592]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5845938, 0)
+size = Vector3(0.2, 1, 0.2)
+material = SubResource("StandardMaterial3D_cj5kg")
+
+[node name="Pied2" type="CSGBox3D" parent="Salles/CSGCombiner3D" unique_id=2063583340]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.2, 0.585, 0)
+size = Vector3(0.2, 1, 0.2)
+material = SubResource("StandardMaterial3D_5d6jn")
+
+[node name="Pied3" type="CSGBox3D" parent="Salles/CSGCombiner3D" unique_id=2073834965]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.2, 0.585, 1)
+size = Vector3(0.2, 1, 0.2)
+material = SubResource("StandardMaterial3D_0g4tx")
+
+[node name="Pied4" type="CSGBox3D" parent="Salles/CSGCombiner3D" unique_id=1963839419]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.585, 1)
+size = Vector3(0.2, 1, 0.2)
+material = SubResource("StandardMaterial3D_lap4s")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Salles/CSGCombiner3D" unique_id=1350075332]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0857803, 1.1035304, 0.49970996)
+size = Vector3(2.5545654, 0.1, 1.3)
+material = SubResource("StandardMaterial3D_fr782")
