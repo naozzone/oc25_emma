@@ -37,35 +37,35 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -49.328766, 1.4607592, 27.057
 size = Vector3(1.2, 2, 1)
 material = SubResource("StandardMaterial3D_xkuxl")
 
-[node name="Salle" type="CSGCombiner3D" parent="." unique_id=1140729824]
+[node name="Salles" type="CSGCombiner3D" parent="." unique_id=1140729824]
 
-[node name="MiniMur" type="CSGBox3D" parent="Salle" unique_id=440805238]
+[node name="MiniMur" type="CSGBox3D" parent="Salles" unique_id=440805238]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -39.867615, 5.338869, 29.559465)
 size = Vector3(20, 10, 1)
 
-[node name="Porte" type="CSGBox3D" parent="Salle/MiniMur" unique_id=893387032]
+[node name="Porte" type="CSGBox3D" parent="Salles/MiniMur" unique_id=893387032]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.625637, -4.001582, 0)
 operation = 2
 size = Vector3(1.2, 2, 1)
 
-[node name="Porte2" type="CSGBox3D" parent="Salle/MiniMur" unique_id=1957260784]
+[node name="Porte2" type="CSGBox3D" parent="Salles/MiniMur" unique_id=1957260784]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.8034477, -4.001582, 0)
 operation = 2
 size = Vector3(1.2, 2, 1)
 
-[node name="MiniMur2" type="CSGBox3D" parent="Salle" unique_id=654361198]
+[node name="MiniMur2" type="CSGBox3D" parent="Salles" unique_id=654361198]
 transform = Transform3D(-0.02129136, 0, -0.9997733, 0, 1, 0, 0.9997733, 0, -0.02129136, -30.288265, 5.2194147, 36.58433)
 size = Vector3(25.020508, 10, 1)
 
-[node name="MiniMur4" type="CSGBox3D" parent="Salle" unique_id=1300986642]
+[node name="MiniMur4" type="CSGBox3D" parent="Salles" unique_id=1300986642]
 transform = Transform3D(-0.02129136, 0, -0.9997733, 0, 1, 0, 0.9997733, 0, -0.02129136, -38.410553, 5.2194147, 39.288685)
 size = Vector3(20.151367, 10, 1)
 
-[node name="MiniMur3" type="CSGBox3D" parent="Salle" unique_id=1946313306]
+[node name="MiniMur3" type="CSGBox3D" parent="Salles" unique_id=1946313306]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -39.867615, 5.37247, 24.565369)
 size = Vector3(20, 10, 1)
 
-[node name="Porte" type="CSGBox3D" parent="Salle/MiniMur3" unique_id=542052972]
+[node name="Porte" type="CSGBox3D" parent="Salles/MiniMur3" unique_id=542052972]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -4.001582, 0)
 operation = 2
 size = Vector3(1.2, 2, 1)
