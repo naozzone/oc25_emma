@@ -18,12 +18,47 @@ albedo_color = Color(0.22352941, 0.15686275, 0.039215688, 1)
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fr782"]
 albedo_color = Color(0.22352941, 0.15686275, 0.039215688, 1)
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fk43w"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wetdp"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ax30f"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_l6opu"]
+albedo_color = Color(0.44755095, 0.44755095, 0.44755095, 1)
+metallic = 0.45
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2g1jv"]
+albedo_color = Color(0.44755095, 0.44755095, 0.44755095, 1)
+metallic = 0.45
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lh778"]
+albedo_color = Color(0.44755095, 0.44755095, 0.44755095, 1)
+metallic = 0.45
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xoowu"]
+albedo_color = Color(0.44755095, 0.44755095, 0.44755095, 1)
+metallic = 0.45
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tarqq"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_f365v"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_thwj7"]
+albedo_color = Color(0, 0, 0, 1)
+
 [node name="DataCenter" type="CSGCombiner3D" unique_id=683001788]
 use_collision = true
 
 [node name="Sol" type="CSGBox3D" parent="." unique_id=1654696488]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.099545, 0, 10.033348)
 use_collision = true
-size = Vector3(100, 1, 100)
+size = Vector3(80, 1, 80)
 
 [node name="Plafond" type="CSGBox3D" parent="." unique_id=611383609]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9.88204, 0)
@@ -32,30 +67,30 @@ use_collision = true
 size = Vector3(100, 1, 100)
 
 [node name="Mur" type="CSGBox3D" parent="." unique_id=580468049]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.1188364, 49.517)
-size = Vector3(100, 10, 1)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.853654, 5.3, 49.517)
+size = Vector3(80, 10, 1)
 
 [node name="Mur2" type="CSGBox3D" parent="." unique_id=339256915]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.2333736, -49.45691)
-size = Vector3(100, 10, 1)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.295277, 5.2333736, -29.441038)
+size = Vector3(80, 10, 1)
 
 [node name="Mur3" type="CSGBox3D" parent="." unique_id=844160036]
-transform = Transform3D(-0.00031413045, 0, -1, 0, 1, 0, 1, 0, -0.00031413045, 49.497547, 5.21185, 0.21046066)
-size = Vector3(100, 10, 1)
+transform = Transform3D(-0.00031413045, 0, -1, 0, 1, 0, 1, 0, -0.00031413045, 29.552132, 5.21185, 10.055859)
+size = Vector3(80, 10, 1)
 
 [node name="Mur4" type="CSGBox3D" parent="." unique_id=1366193074]
-transform = Transform3D(-0.00031413045, 0, -1, 0, 1, 0, 1, 0, -0.00031413045, -49.48773, 5.2957706, 0.21046066)
-size = Vector3(100, 10, 1)
+transform = Transform3D(-0.00031413045, 0, -1, 0, 1, 0, 1, 0, -0.00031413045, -49.48773, 5.2957706, 10.308201)
+size = Vector3(80, 10, 1)
 
 [node name="Porte2" type="CSGBox3D" parent="." unique_id=1493985124]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -49.328766, 1.4607592, 27.057161)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -49.328766, 1.4607592, 32.41767)
 size = Vector3(1.2, 2, 1)
 material = SubResource("StandardMaterial3D_xkuxl")
 
 [node name="Salles" type="CSGCombiner3D" parent="." unique_id=1140729824]
 
 [node name="MiniMur" type="CSGBox3D" parent="Salles" unique_id=440805238]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -39.867615, 5.338869, 29.559465)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -39.867615, 5.338869, 35.097057)
 size = Vector3(20, 10, 1)
 
 [node name="Porte" type="CSGBox3D" parent="Salles/MiniMur" unique_id=893387032]
@@ -69,46 +104,341 @@ operation = 2
 size = Vector3(1.2, 2, 1)
 
 [node name="MiniMur2" type="CSGBox3D" parent="Salles" unique_id=654361198]
-transform = Transform3D(-0.02129136, 0, -0.9997733, 0, 1, 0, 0.9997733, 0, -0.02129136, -30.288265, 5.2194147, 36.58433)
-size = Vector3(25.020508, 10, 1)
+transform = Transform3D(-0.02129136, 0, -0.9997733, 0, 1, 0, 0.9997733, 0, -0.02129136, -30.339487, 5.2194147, 39.575626)
+size = Vector3(20.209106, 10, 1)
 
 [node name="MiniMur4" type="CSGBox3D" parent="Salles" unique_id=1300986642]
-transform = Transform3D(-0.02129136, 0, -0.9997733, 0, 1, 0, 0.9997733, 0, -0.02129136, -38.410553, 5.2194147, 39.288685)
-size = Vector3(20.151367, 10, 1)
+transform = Transform3D(-0.02129136, 0, -0.9997733, 0, 1, 0, 0.9997733, 0, -0.02129136, -40.8991, 5.2194147, 42.064545)
+size = Vector3(14.598389, 10, 1)
 
 [node name="MiniMur3" type="CSGBox3D" parent="Salles" unique_id=1946313306]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -39.867615, 5.37247, 24.565369)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -39.867615, 5.37247, 29.986137)
 size = Vector3(20, 10, 1)
 
 [node name="Porte" type="CSGBox3D" parent="Salles/MiniMur3" unique_id=542052972]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -4.001582, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.3648987, -4.001582, 0)
 operation = 2
 size = Vector3(1.2, 2, 1)
 
-[node name="CSGCombiner3D" type="CSGCombiner3D" parent="Salles" unique_id=1304722987]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.858762, 0)
+[node name="Bureau" type="CSGCombiner3D" parent="Salles" unique_id=1304722987]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -44.305653, 0.42001188, 47.820305)
 
-[node name="Pied" type="CSGBox3D" parent="Salles/CSGCombiner3D" unique_id=1905442592]
+[node name="Pied" type="CSGBox3D" parent="Salles/Bureau" unique_id=1905442592]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5845938, 0)
 size = Vector3(0.2, 1, 0.2)
 material = SubResource("StandardMaterial3D_cj5kg")
 
-[node name="Pied2" type="CSGBox3D" parent="Salles/CSGCombiner3D" unique_id=2063583340]
+[node name="Pied2" type="CSGBox3D" parent="Salles/Bureau" unique_id=2063583340]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.2, 0.585, 0)
 size = Vector3(0.2, 1, 0.2)
 material = SubResource("StandardMaterial3D_5d6jn")
 
-[node name="Pied3" type="CSGBox3D" parent="Salles/CSGCombiner3D" unique_id=2073834965]
+[node name="Pied3" type="CSGBox3D" parent="Salles/Bureau" unique_id=2073834965]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.2, 0.585, 1)
 size = Vector3(0.2, 1, 0.2)
 material = SubResource("StandardMaterial3D_0g4tx")
 
-[node name="Pied4" type="CSGBox3D" parent="Salles/CSGCombiner3D" unique_id=1963839419]
+[node name="Pied4" type="CSGBox3D" parent="Salles/Bureau" unique_id=1963839419]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.585, 1)
 size = Vector3(0.2, 1, 0.2)
 material = SubResource("StandardMaterial3D_lap4s")
 
-[node name="CSGBox3D" type="CSGBox3D" parent="Salles/CSGCombiner3D" unique_id=1350075332]
+[node name="Haut" type="CSGBox3D" parent="Salles/Bureau" unique_id=1350075332]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0857803, 1.1035304, 0.49970996)
 size = Vector3(2.5545654, 0.1, 1.3)
 material = SubResource("StandardMaterial3D_fr782")
+
+[node name="Tiroir" type="CSGBox3D" parent="Salles/Bureau" unique_id=1848359965]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.44270325, 0.512002, 0.49878693)
+size = Vector3(0.5, 0.8959961, 1)
+
+[node name="Tiroir2" type="CSGBox3D" parent="Salles/Bureau" unique_id=1664673405]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.7801857, 0.5110254, 0.49878693)
+size = Vector3(0.5, 0.8979492, 1)
+
+[node name="Ordinateur" type="CSGCombiner3D" parent="Salles/Bureau" unique_id=2005392076]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.80869675, -0.33096123, 1.3481674)
+
+[node name="Ecran" type="CSGBox3D" parent="Salles/Bureau/Ordinateur" unique_id=319299391]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.2909279, 1.7688357, -0.69283295)
+size = Vector3(0.7, 0.4, 0.1)
+material = SubResource("StandardMaterial3D_fk43w")
+
+[node name="Extérieur" type="CSGBox3D" parent="Salles/Bureau/Ordinateur" unique_id=1780740281]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.29559326, 1.7680126, -0.6849022)
+size = Vector3(0.75, 0.45, 0.11)
+
+[node name="PiedOrdi" type="CSGBox3D" parent="Salles/Bureau/Ordinateur" unique_id=1218499961]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.26327133, 1.5276407, -0.68442917)
+size = Vector3(0.1, 0.05, 0.1)
+
+[node name="Support" type="CSGBox3D" parent="Salles/Bureau/Ordinateur" unique_id=1154755992]
+transform = Transform3D(1.0000001, 0, 0, 0, 1, 0, 0, 0, 1.0000001, -0.2687683, 1.494993, -0.7164726)
+size = Vector3(0.4, 0.02, 0.15)
+
+[node name="Clavier" type="CSGBox3D" parent="Salles/Bureau/Ordinateur" unique_id=276221702]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.2675476, 1.485495, -1.0948334)
+size = Vector3(0.5, 0.01, 0.2)
+
+[node name="Souris" type="CSGSphere3D" parent="Salles/Bureau/Ordinateur" unique_id=1921015594]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6706848, 1.4627011, -1.1967468)
+radius = 0.05
+
+[node name="Ordinateur2" type="CSGCombiner3D" parent="Salles/Bureau" unique_id=654087719]
+transform = Transform3D(0.70755094, 0, 0.70666236, 0, 1, 0, -0.70666236, 0, 0.70755094, 0.23425674, -0.33096123, 0.6802254)
+
+[node name="Ecran" type="CSGBox3D" parent="Salles/Bureau/Ordinateur2" unique_id=782844629]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.2909279, 1.7688357, -0.69283295)
+size = Vector3(0.7, 0.4, 0.1)
+material = SubResource("StandardMaterial3D_fk43w")
+
+[node name="Extérieur" type="CSGBox3D" parent="Salles/Bureau/Ordinateur2" unique_id=2097942186]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.29559326, 1.7680126, -0.6849022)
+size = Vector3(0.75, 0.45, 0.11)
+
+[node name="PiedOrdi" type="CSGBox3D" parent="Salles/Bureau/Ordinateur2" unique_id=931212457]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.26327133, 1.5276407, -0.68442917)
+size = Vector3(0.1, 0.05, 0.1)
+
+[node name="Support" type="CSGBox3D" parent="Salles/Bureau/Ordinateur2" unique_id=2080646953]
+transform = Transform3D(1.0000001, 0, 0, 0, 1, 0, 0, 0, 1.0000001, -0.2687683, 1.494993, -0.7164726)
+size = Vector3(0.4, 0.02, 0.15)
+
+[node name="Ordinateur3" type="CSGCombiner3D" parent="Salles/Bureau" unique_id=1023963381]
+transform = Transform3D(0.69864, 0, -0.7154733, 0, 1, 0, 0.7154733, 0, 0.69864, -2.0276031, -0.33096123, 1.0914154)
+
+[node name="Ecran" type="CSGBox3D" parent="Salles/Bureau/Ordinateur3" unique_id=343575619]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.2909279, 1.7688357, -0.69283295)
+size = Vector3(0.7, 0.4, 0.1)
+material = SubResource("StandardMaterial3D_fk43w")
+
+[node name="Extérieur" type="CSGBox3D" parent="Salles/Bureau/Ordinateur3" unique_id=996333657]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.29559326, 1.7680126, -0.6849022)
+size = Vector3(0.75, 0.45, 0.11)
+
+[node name="PiedOrdi" type="CSGBox3D" parent="Salles/Bureau/Ordinateur3" unique_id=1201044489]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.26327133, 1.5276407, -0.68442917)
+size = Vector3(0.1, 0.05, 0.1)
+
+[node name="Support" type="CSGBox3D" parent="Salles/Bureau/Ordinateur3" unique_id=1623358925]
+transform = Transform3D(1.0000001, 0, 0, 0, 1, 0, 0, 0, 1.0000001, -0.2687683, 1.494993, -0.7164726)
+size = Vector3(0.4, 0.02, 0.15)
+
+[node name="Bureau2" type="CSGCombiner3D" parent="Salles" unique_id=1423083629]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -34.72158, 0.42001188, 43.361805)
+
+[node name="Pied" type="CSGBox3D" parent="Salles/Bureau2" unique_id=499451952]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5845938, 0)
+size = Vector3(0.2, 1, 0.2)
+material = SubResource("StandardMaterial3D_cj5kg")
+
+[node name="Pied2" type="CSGBox3D" parent="Salles/Bureau2" unique_id=2058545845]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.2, 0.585, 0)
+size = Vector3(0.2, 1, 0.2)
+material = SubResource("StandardMaterial3D_5d6jn")
+
+[node name="Pied3" type="CSGBox3D" parent="Salles/Bureau2" unique_id=168149443]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.2, 0.585, 1)
+size = Vector3(0.2, 1, 0.2)
+material = SubResource("StandardMaterial3D_0g4tx")
+
+[node name="Pied4" type="CSGBox3D" parent="Salles/Bureau2" unique_id=2042188348]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.585, 1)
+size = Vector3(0.2, 1, 0.2)
+material = SubResource("StandardMaterial3D_lap4s")
+
+[node name="Haut" type="CSGBox3D" parent="Salles/Bureau2" unique_id=328259752]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0857803, 1.1035304, 0.49970996)
+size = Vector3(2.5545654, 0.1, 1.3)
+material = SubResource("StandardMaterial3D_fr782")
+
+[node name="Tiroir" type="CSGBox3D" parent="Salles/Bureau2" unique_id=316990016]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.44270325, 0.512002, 0.49878693)
+size = Vector3(0.5, 0.8959961, 1)
+
+[node name="Tiroir2" type="CSGBox3D" parent="Salles/Bureau2" unique_id=1147648265]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.7801857, 0.5110254, 0.49878693)
+size = Vector3(0.5, 0.8979492, 1)
+
+[node name="Ordinateur4" type="CSGCombiner3D" parent="Salles/Bureau2" unique_id=1782576278]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.76265717, -0.317896, 1.2839508)
+
+[node name="Ecran" type="CSGBox3D" parent="Salles/Bureau2/Ordinateur4" unique_id=170424963]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.2909279, 1.7688357, -0.69283295)
+size = Vector3(0.7, 0.4, 0.1)
+material = SubResource("StandardMaterial3D_fk43w")
+
+[node name="Extérieur" type="CSGBox3D" parent="Salles/Bureau2/Ordinateur4" unique_id=1288499493]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.29559326, 1.7680126, -0.6849022)
+size = Vector3(0.75, 0.45, 0.11)
+
+[node name="PiedOrdi" type="CSGBox3D" parent="Salles/Bureau2/Ordinateur4" unique_id=41593390]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.26327133, 1.5276407, -0.68442917)
+size = Vector3(0.1, 0.05, 0.1)
+
+[node name="Support" type="CSGBox3D" parent="Salles/Bureau2/Ordinateur4" unique_id=954364316]
+transform = Transform3D(1.0000001, 0, 0, 0, 1, 0, 0, 0, 1.0000001, -0.2687683, 1.494993, -0.7164726)
+size = Vector3(0.4, 0.02, 0.15)
+
+[node name="Souris" type="CSGSphere3D" parent="Salles/Bureau2/Ordinateur4" unique_id=927963543]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.69121933, 1.4627011, -1.0863304)
+radius = 0.05
+
+[node name="Clavier" type="CSGBox3D" parent="Salles/Bureau2/Ordinateur4" unique_id=1416755598]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.2675476, 1.4784566, -1.0948334)
+size = Vector3(0.5, 0.01, 0.2)
+
+[node name="EcransSurveillance" type="CSGCombiner3D" parent="Salles" unique_id=141285067]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.35, 0, 0)
+
+[node name="Ecran" type="CSGBox3D" parent="Salles/EcransSurveillance" unique_id=1953809903]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -35.300426, 3.9252934, 48.98499)
+size = Vector3(1.5, 1, 0.1)
+material = SubResource("StandardMaterial3D_fk43w")
+
+[node name="Ecran2" type="CSGBox3D" parent="Salles/EcransSurveillance" unique_id=1031991128]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -36.851513, 3.9252934, 48.98499)
+size = Vector3(1.5, 1, 0.1)
+material = SubResource("StandardMaterial3D_fk43w")
+
+[node name="Ecran3" type="CSGBox3D" parent="Salles/EcransSurveillance" unique_id=1221518489]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -33.744446, 3.9252934, 48.98499)
+size = Vector3(1.5, 1, 0.1)
+material = SubResource("StandardMaterial3D_fk43w")
+
+[node name="Ecran4" type="CSGBox3D" parent="Salles/EcransSurveillance" unique_id=2070416111]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -35.300426, 4.992565, 48.98499)
+size = Vector3(1.5, 1, 0.1)
+material = SubResource("StandardMaterial3D_fk43w")
+
+[node name="Ecran5" type="CSGBox3D" parent="Salles/EcransSurveillance" unique_id=793056974]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -33.741, 4.993, 48.985)
+size = Vector3(1.5, 1, 0.1)
+material = SubResource("StandardMaterial3D_fk43w")
+
+[node name="Ecran6" type="CSGBox3D" parent="Salles/EcransSurveillance" unique_id=1179070974]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -36.855404, 4.993, 48.985)
+size = Vector3(1.5, 1, 0.1)
+material = SubResource("StandardMaterial3D_fk43w")
+
+[node name="Ecran7" type="CSGBox3D" parent="Salles/EcransSurveillance" unique_id=1386122794]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32.16105, 3.9252934, 48.98499)
+size = Vector3(1.5, 1, 0.1)
+material = SubResource("StandardMaterial3D_fk43w")
+
+[node name="Ecran8" type="CSGBox3D" parent="Salles/EcransSurveillance" unique_id=3132500]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32.161, 4.993, 48.985)
+size = Vector3(1.5, 1, 0.1)
+material = SubResource("StandardMaterial3D_fk43w")
+
+[node name="Ecran9" type="CSGBox3D" parent="Salles/EcransSurveillance" unique_id=929715459]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -38.422974, 4.993, 48.985)
+size = Vector3(1.5, 1, 0.1)
+material = SubResource("StandardMaterial3D_fk43w")
+
+[node name="Ecran10" type="CSGBox3D" parent="Salles/EcransSurveillance" unique_id=1748601649]
+transform = Transform3D(0.99998844, 0.004546244, 0.0015650573, -0.004550679, 0.9999856, 0.0028380712, -0.0015521157, -0.0028451697, 0.99999475, -38.405, 3.925, 48.985)
+size = Vector3(1.5, 1, 0.1)
+material = SubResource("StandardMaterial3D_fk43w")
+
+[node name="Chaise" type="CSGCombiner3D" parent="Salles" unique_id=2084520645]
+transform = Transform3D(-0.60469645, 0, -0.79645604, 0, 1, 0, 0.79645604, 0, -0.60469645, -46.038128, 1.1709168, 46.039677)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Salles/Chaise" unique_id=1098925760]
+size = Vector3(1, 0.1, 1)
+material = SubResource("StandardMaterial3D_wetdp")
+
+[node name="Dos" type="CSGBox3D" parent="Salles/Chaise" unique_id=781610243]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0.4531281, 0.45709538)
+size = Vector3(1, 0.1, 1)
+material = SubResource("StandardMaterial3D_ax30f")
+
+[node name="Pied" type="CSGCylinder3D" parent="Salles/Chaise" unique_id=465396616]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.23047638, 0)
+radius = 0.053222656
+height = 0.40893555
+material = SubResource("StandardMaterial3D_l6opu")
+
+[node name="Pied2" type="CSGCylinder3D" parent="Salles/Chaise" unique_id=219365126]
+transform = Transform3D(1, 0, 0, 0, 0.67830074, -0.73478436, 0, 0.73478436, 0.67830074, 0, -0.47268128, -0.114634156)
+radius = 0.053222656
+height = 0.40893555
+material = SubResource("StandardMaterial3D_2g1jv")
+
+[node name="Pied3" type="CSGCylinder3D" parent="Salles/Chaise" unique_id=764289659]
+transform = Transform3D(-0.6126864, -0.5807193, -0.5360788, 0, 0.67830074, -0.73478436, 0.7903261, -0.4501924, -0.41558564, 0.11264816, -0.48348355, 0.09425019)
+radius = 0.053222656
+height = 0.40893555
+material = SubResource("StandardMaterial3D_lh778")
+
+[node name="Pied4" type="CSGCylinder3D" parent="Salles/Chaise" unique_id=1305490910]
+transform = Transform3D(-0.53113246, 0.6225746, 0.5747167, -1.9232164e-08, 0.6783006, -0.73478425, -0.8472887, -0.39026773, -0.36026746, -0.13415325, -0.48348355, 0.087320134)
+radius = 0.053222656
+height = 0.40893555
+material = SubResource("StandardMaterial3D_xoowu")
+
+[node name="Roue" type="CSGSphere3D" parent="Salles/Chaise" unique_id=756659637]
+transform = Transform3D(0.9999973, 0, -0.0023038324, 0, 1, 0, 0.0023038324, 0, 0.9999973, 0, -0.62616014, -0.27790642)
+radius = 0.06347881
+material = SubResource("StandardMaterial3D_tarqq")
+
+[node name="Roue2" type="CSGSphere3D" parent="Salles/Chaise" unique_id=726827326]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.21910396, -0.6247933, 0.18199375)
+radius = 0.06347881
+material = SubResource("StandardMaterial3D_f365v")
+
+[node name="Roue3" type="CSGSphere3D" parent="Salles/Chaise" unique_id=86013354]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.25702143, -0.6247933, 0.16110879)
+radius = 0.06347881
+material = SubResource("StandardMaterial3D_thwj7")
+
+[node name="Chaise2" type="CSGCombiner3D" parent="Salles" unique_id=286252360]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -35.791935, 1.1709168, 42.249767)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Salles/Chaise2" unique_id=364500192]
+size = Vector3(1, 0.1, 1)
+material = SubResource("StandardMaterial3D_wetdp")
+
+[node name="Dos" type="CSGBox3D" parent="Salles/Chaise2" unique_id=1580756573]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0.4531281, 0.45709538)
+size = Vector3(1, 0.1, 1)
+material = SubResource("StandardMaterial3D_ax30f")
+
+[node name="Pied" type="CSGCylinder3D" parent="Salles/Chaise2" unique_id=1958442176]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.23047638, 0)
+radius = 0.053222656
+height = 0.40893555
+material = SubResource("StandardMaterial3D_l6opu")
+
+[node name="Pied2" type="CSGCylinder3D" parent="Salles/Chaise2" unique_id=1796234099]
+transform = Transform3D(1, 0, 0, 0, 0.67830074, -0.73478436, 0, 0.73478436, 0.67830074, 0, -0.47268128, -0.114634156)
+radius = 0.053222656
+height = 0.40893555
+material = SubResource("StandardMaterial3D_2g1jv")
+
+[node name="Pied3" type="CSGCylinder3D" parent="Salles/Chaise2" unique_id=35108683]
+transform = Transform3D(-0.6126864, -0.5807193, -0.5360788, 0, 0.67830074, -0.73478436, 0.7903261, -0.4501924, -0.41558564, 0.11264816, -0.48348355, 0.09425019)
+radius = 0.053222656
+height = 0.40893555
+material = SubResource("StandardMaterial3D_lh778")
+
+[node name="Pied4" type="CSGCylinder3D" parent="Salles/Chaise2" unique_id=512045841]
+transform = Transform3D(-0.53113246, 0.6225746, 0.5747167, -1.9232164e-08, 0.6783006, -0.73478425, -0.8472887, -0.39026773, -0.36026746, -0.13415325, -0.48348355, 0.087320134)
+radius = 0.053222656
+height = 0.40893555
+material = SubResource("StandardMaterial3D_xoowu")
+
+[node name="Roue" type="CSGSphere3D" parent="Salles/Chaise2" unique_id=783674521]
+transform = Transform3D(0.9999973, 0, -0.0023038324, 0, 1, 0, 0.0023038324, 0, 0.9999973, 0, -0.62616014, -0.27790642)
+radius = 0.06347881
+material = SubResource("StandardMaterial3D_tarqq")
+
+[node name="Roue2" type="CSGSphere3D" parent="Salles/Chaise2" unique_id=781030158]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.21910396, -0.6247933, 0.18199375)
+radius = 0.06347881
+material = SubResource("StandardMaterial3D_f365v")
+
+[node name="Roue3" type="CSGSphere3D" parent="Salles/Chaise2" unique_id=1292791907]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.25702143, -0.6247933, 0.16110879)
+radius = 0.06347881
+material = SubResource("StandardMaterial3D_thwj7")
