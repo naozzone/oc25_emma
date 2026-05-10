@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://bkorafkskqvlk"]
 
+[ext_resource type="PackedScene" uid="uid://bwfdlp85pb0ep" path="res://serveur.tscn" id="1_cj5kg"]
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xkuxl"]
 albedo_color = Color(0.5154445, 0.33673406, 0.11010771, 1)
 
@@ -56,9 +58,9 @@ albedo_color = Color(0, 0, 0, 1)
 use_collision = true
 
 [node name="Sol" type="CSGBox3D" parent="." unique_id=1654696488]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.81591, 0, 17.009453)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.629272, 0, 26.483578)
 use_collision = true
-size = Vector3(65, 1, 65)
+size = Vector3(45, 1, 45)
 
 [node name="Plafond" type="CSGBox3D" parent="." unique_id=611383609]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9.88204, 0)
@@ -67,20 +69,20 @@ use_collision = true
 size = Vector3(100, 1, 100)
 
 [node name="Mur" type="CSGBox3D" parent="." unique_id=580468049]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.455978, 5.3, 48.94597)
-size = Vector3(65, 10, 1)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.65905, 5.3, 48.94597)
+size = Vector3(45, 10, 1)
 
 [node name="Mur2" type="CSGBox3D" parent="." unique_id=339256915]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.713825, 5.2333736, -15.102989)
-size = Vector3(65, 10, 1)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.40559, 5.2333736, 3.5412912)
+size = Vector3(45, 10, 1)
 
 [node name="Mur3" type="CSGBox3D" parent="." unique_id=844160036]
-transform = Transform3D(-0.00031413045, 0, -1, 0, 1, 0, 1, 0, -0.00031413045, 15.14827, 5.21185, 17.133774)
-size = Vector3(65, 10, 1)
+transform = Transform3D(-0.00031413045, 0, -1, 0, 1, 0, 1, 0, -0.00031413045, -4.10182, 5.21185, 26.40829)
+size = Vector3(45, 10, 1)
 
 [node name="Mur4" type="CSGBox3D" parent="." unique_id=1366193074]
-transform = Transform3D(-0.00031413045, 0, -1, 0, 1, 0, 1, 0, -0.00031413045, -48.89193, 5.2957706, 16.883106)
-size = Vector3(65, 10, 1)
+transform = Transform3D(-0.00031413045, 0, -1, 0, 1, 0, 1, 0, -0.00031413045, -48.89193, 5.2957706, 25.976543)
+size = Vector3(45, 10, 1)
 
 [node name="Porte2" type="CSGBox3D" parent="." unique_id=1493985124]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -49.548817, 1.4607592, 32.41767)
@@ -442,3 +444,131 @@ material = SubResource("StandardMaterial3D_f365v")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.25702143, -0.6247933, 0.16110879)
 radius = 0.06347881
 material = SubResource("StandardMaterial3D_thwj7")
+
+[node name="PetiteRangéeServeur" type="CSGCombiner3D" parent="." unique_id=867785003]
+
+[node name="Serveur" parent="PetiteRangéeServeur" unique_id=907864642 instance=ExtResource("1_cj5kg")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -28.764023, 1.9874549, 47.714314)
+
+[node name="Serveur2" parent="PetiteRangéeServeur" unique_id=1936175998 instance=ExtResource("1_cj5kg")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -27.2, 1.987, 47.714)
+
+[node name="Serveur3" parent="PetiteRangéeServeur" unique_id=37113382 instance=ExtResource("1_cj5kg")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -25.7, 1.987, 47.714)
+
+[node name="Serveur4" parent="PetiteRangéeServeur" unique_id=21981250 instance=ExtResource("1_cj5kg")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -24.2, 1.987, 47.714)
+
+[node name="Serveur5" parent="PetiteRangéeServeur" unique_id=1044395350 instance=ExtResource("1_cj5kg")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -22.7, 1.987, 47.714)
+
+[node name="Serveur6" parent="PetiteRangéeServeur" unique_id=1586091123 instance=ExtResource("1_cj5kg")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -21.2, 1.987, 47.714)
+
+[node name="Serveur7" parent="PetiteRangéeServeur" unique_id=319586679 instance=ExtResource("1_cj5kg")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -19.7, 1.987, 47.714)
+
+[node name="Serveur8" parent="PetiteRangéeServeur" unique_id=118828565 instance=ExtResource("1_cj5kg")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -18.2, 1.987, 47.714)
+
+[node name="Serveur9" parent="PetiteRangéeServeur" unique_id=1678973900 instance=ExtResource("1_cj5kg")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -16.7, 1.987, 47.714)
+
+[node name="Serveur10" parent="PetiteRangéeServeur" unique_id=1889068500 instance=ExtResource("1_cj5kg")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -15.2, 1.987, 47.714)
+
+[node name="Serveur11" parent="PetiteRangéeServeur" unique_id=1500540695 instance=ExtResource("1_cj5kg")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -13.7, 1.987, 47.714)
+
+[node name="Serveur12" parent="PetiteRangéeServeur" unique_id=138500826 instance=ExtResource("1_cj5kg")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -12.2, 1.987, 47.714)
+
+[node name="Serveur13" parent="PetiteRangéeServeur" unique_id=863954459 instance=ExtResource("1_cj5kg")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -10.7, 1.987, 47.714)
+
+[node name="Serveur14" parent="PetiteRangéeServeur" unique_id=1358621577 instance=ExtResource("1_cj5kg")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -9.2, 1.987, 47.714)
+
+[node name="Serveur15" parent="PetiteRangéeServeur" unique_id=1681852249 instance=ExtResource("1_cj5kg")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -7.7, 1.987, 47.714)
+
+[node name="Serveur16" parent="PetiteRangéeServeur" unique_id=1560636996 instance=ExtResource("1_cj5kg")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -6.2, 1.987, 47.714)
+
+[node name="PetiteRangéeServeur2" type="CSGCombiner3D" parent="." unique_id=1938049187]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -35.515133, 0, 89.46368)
+
+[node name="Serveur2" parent="PetiteRangéeServeur2" unique_id=630686798 instance=ExtResource("1_cj5kg")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -27.2, 1.987, 47.714)
+
+[node name="Serveur3" parent="PetiteRangéeServeur2" unique_id=335420024 instance=ExtResource("1_cj5kg")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -25.7, 1.987, 47.714)
+
+[node name="Serveur4" parent="PetiteRangéeServeur2" unique_id=1280795677 instance=ExtResource("1_cj5kg")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -24.2, 1.987, 47.714)
+
+[node name="Serveur5" parent="PetiteRangéeServeur2" unique_id=1283890474 instance=ExtResource("1_cj5kg")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -22.7, 1.987, 47.714)
+
+[node name="Serveur6" parent="PetiteRangéeServeur2" unique_id=557159291 instance=ExtResource("1_cj5kg")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -21.2, 1.987, 47.714)
+
+[node name="Serveur7" parent="PetiteRangéeServeur2" unique_id=229659043 instance=ExtResource("1_cj5kg")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -19.7, 1.987, 47.714)
+
+[node name="Serveur9" parent="PetiteRangéeServeur2" unique_id=605562834 instance=ExtResource("1_cj5kg")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -16.7, 1.987, 47.714)
+
+[node name="Serveur10" parent="PetiteRangéeServeur2" unique_id=1037848474 instance=ExtResource("1_cj5kg")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -15.2, 1.987, 47.714)
+
+[node name="Serveur11" parent="PetiteRangéeServeur2" unique_id=2095242225 instance=ExtResource("1_cj5kg")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -13.7, 1.987, 47.714)
+
+[node name="Serveur12" parent="PetiteRangéeServeur2" unique_id=1964743990 instance=ExtResource("1_cj5kg")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -12.2, 1.987, 47.714)
+
+[node name="Serveur13" parent="PetiteRangéeServeur2" unique_id=1294315059 instance=ExtResource("1_cj5kg")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -10.7, 1.987, 47.714)
+
+[node name="Serveur14" parent="PetiteRangéeServeur2" unique_id=834917932 instance=ExtResource("1_cj5kg")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -9.2, 1.987, 47.714)
+
+[node name="PetiteRangéeServeur3" type="CSGCombiner3D" parent="." unique_id=482120119]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9001465, 0, -6.925129)
+
+[node name="Serveur2" parent="PetiteRangéeServeur3" unique_id=536685760 instance=ExtResource("1_cj5kg")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -27.2, 1.987, 47.714)
+
+[node name="Serveur3" parent="PetiteRangéeServeur3" unique_id=1449461387 instance=ExtResource("1_cj5kg")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -25.7, 1.987, 47.714)
+
+[node name="Serveur4" parent="PetiteRangéeServeur3" unique_id=488171658 instance=ExtResource("1_cj5kg")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -24.2, 1.987, 47.714)
+
+[node name="Serveur5" parent="PetiteRangéeServeur3" unique_id=1192645878 instance=ExtResource("1_cj5kg")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -22.7, 1.987, 47.714)
+
+[node name="Serveur6" parent="PetiteRangéeServeur3" unique_id=834197842 instance=ExtResource("1_cj5kg")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -21.2, 1.987, 47.714)
+
+[node name="Serveur7" parent="PetiteRangéeServeur3" unique_id=677322267 instance=ExtResource("1_cj5kg")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -19.7, 1.987, 47.714)
+
+[node name="Serveur9" parent="PetiteRangéeServeur3" unique_id=367249676 instance=ExtResource("1_cj5kg")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -16.7, 1.987, 47.714)
+
+[node name="Serveur10" parent="PetiteRangéeServeur3" unique_id=1779275707 instance=ExtResource("1_cj5kg")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -15.2, 1.987, 47.714)
+
+[node name="Serveur11" parent="PetiteRangéeServeur3" unique_id=758036443 instance=ExtResource("1_cj5kg")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -13.7, 1.987, 47.714)
+
+[node name="Serveur12" parent="PetiteRangéeServeur3" unique_id=1163841582 instance=ExtResource("1_cj5kg")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -12.2, 1.987, 47.714)
+
+[node name="Serveur13" parent="PetiteRangéeServeur3" unique_id=1644463838 instance=ExtResource("1_cj5kg")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -10.7, 1.987, 47.714)
+
+[node name="Serveur14" parent="PetiteRangéeServeur3" unique_id=1570286709 instance=ExtResource("1_cj5kg")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -9.2, 1.987, 47.714)
