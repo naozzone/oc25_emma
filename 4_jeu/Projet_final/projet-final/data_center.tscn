@@ -296,7 +296,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.2675476, 1.4784566, -1.094
 size = Vector3(0.5, 0.01, 0.2)
 
 [node name="EcransSurveillance" type="CSGCombiner3D" parent="Salles" unique_id=141285067]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.35, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.35, 0, -0.6103096)
 
 [node name="Ecran" type="CSGBox3D" parent="Salles/EcransSurveillance" unique_id=1953809903]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -35.300426, 3.9252934, 48.98499)
