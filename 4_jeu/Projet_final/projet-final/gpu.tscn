@@ -1,5 +1,8 @@
 [gd_scene format=3 uid="uid://dvrrmmj0ggotw"]
 
+[ext_resource type="Script" uid="uid://b8l00ftxycbfn" path="res://move.gd" id="1_tgo4v"]
+[ext_resource type="Script" uid="uid://ckma5l6y2bb38" path="res://rotate.gd" id="2_uxivv"]
+
 [node name="GPU" type="Node3D" unique_id=146931932]
 
 [node name="Sol" type="CSGBox3D" parent="." unique_id=855213509]
@@ -22,3 +25,22 @@ size = Vector3(10, 5, 10)
 [node name="Arrivée" type="CSGBox3D" parent="." unique_id=243535007]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -45.099804)
 size = Vector3(10, 5, 10)
+
+[node name="Plateforme" type="CSGBox3D" parent="." unique_id=219247833]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.21010697, 2.244, -6.4544926)
+size = Vector3(3, 0.5, 3)
+script = ExtResource("1_tgo4v")
+
+[node name="Plateforme2" type="CSGBox3D" parent="." unique_id=1513346041]
+transform = Transform3D(0.99999964, -0.00012234089, 0.00079407234, 0.00012292684, 0.99999976, -0.0007248166, -0.0007939819, 0.00072491576, 0.9999994, -4.0906363, 2.244, -14.538818)
+size = Vector3(3, 0.5, 3)
+script = ExtResource("1_tgo4v")
+
+[node name="Plateforme3" type="CSGBox3D" parent="." unique_id=1440943660]
+transform = Transform3D(-0.7576655, 0, -0.6526425, 0, 1, 0, 0.6526425, 0, -0.7576655, -0.07915926, 2.244, -19.049406)
+size = Vector3(3, 0.5, 3)
+script = ExtResource("2_uxivv")
+
+[node name="Plateforme4" type="CSGBox3D" parent="." unique_id=738478847]
+transform = Transform3D(0.7299487, 0, 0.68350166, 0, 1, 0, -0.68350166, 0, 0.7299487, -0.07915926, 2.244, -12.511392)
+size = Vector3(3, 0.5, 3)
