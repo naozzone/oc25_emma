@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://bkorafkskqvlk" path="res://data_center.tscn" id="1_0xm2m"]
 [ext_resource type="PackedScene" uid="uid://bs72ogkvdd7d6" path="res://addons/proto_controller2/proto_controller.tscn" id="2_h2yge"]
 [ext_resource type="PackedScene" uid="uid://bwfdlp85pb0ep" path="res://serveur.tscn" id="3_h2yge"]
+[ext_resource type="PackedScene" uid="uid://dvrrmmj0ggotw" path="res://gpu.tscn" id="4_1bvp3"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_0xm2m"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -28,10 +29,13 @@ shadow_enabled = true
 environment = SubResource("Environment_1bvp3")
 
 [node name="ProtoController" parent="." unique_id=2021529420 instance=ExtResource("2_h2yge")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -46.048935, 2.860283, 42.167446)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 305.8652, 101.297134, -134.89478)
 
 [node name="DataCenter" parent="." unique_id=683001788 instance=ExtResource("1_0xm2m")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.10746539, 0, -1.2144728)
 
 [node name="Serveur" parent="." unique_id=907864642 instance=ExtResource("3_h2yge")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.969313, 1.7499924, 10.215578)
+
+[node name="GPU" parent="." unique_id=146931932 instance=ExtResource("4_1bvp3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 302.84067, 95.5829, -134.19325)
