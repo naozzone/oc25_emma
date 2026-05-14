@@ -1,3 +1,24 @@
 [gd_scene format=3 uid="uid://dvrrmmj0ggotw"]
 
 [node name="GPU" type="Node3D" unique_id=146931932]
+
+[node name="Sol" type="CSGBox3D" parent="." unique_id=855213509]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.9892807, -22.527771)
+size = Vector3(40, 1, 55)
+
+[node name="Départ" type="CSGCombiner3D" parent="." unique_id=91006603]
+
+[node name="Base" type="CSGBox3D" parent="Départ" unique_id=497691130]
+size = Vector3(10, 5, 10)
+
+[node name="Rampe" type="CSGBox3D" parent="Départ" unique_id=800069134]
+transform = Transform3D(0.85945994, 0.5112031, 0, -0.5112031, 0.85945994, 0, 0, 0, 1, 7.993513, -2.196856, 0)
+size = Vector3(10, 5, 10)
+
+[node name="Rampe2" type="CSGBox3D" parent="Départ" unique_id=144037323]
+transform = Transform3D(-0.85985225, -0.5105429, -8.742278e-08, -0.5105429, 0.85985225, 0, 7.5170675e-08, 4.463308e-08, -1, -8.024825, -2.2097306, 0)
+size = Vector3(10, 5, 10)
+
+[node name="Arrivée" type="CSGBox3D" parent="." unique_id=243535007]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -45.099804)
+size = Vector3(10, 5, 10)
