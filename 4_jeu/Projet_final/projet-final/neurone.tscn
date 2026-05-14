@@ -37,6 +37,7 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="GoalLabel" type="Label3D" parent="CanvasLayer/Control" unique_id=1725767818]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.7946602, 0)
 text = "Obtenir y = 10
 "
 
