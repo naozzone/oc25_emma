@@ -1300,3 +1300,6 @@ transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -10.
 
 [node name="Serveur14" parent="DoublePetiteRangée7/PetiteRangéeServeur3" unique_id=409890389 instance=ExtResource("1_cj5kg")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -9.2, 1.987, 47.714)
+
+[node name="Serveur" parent="." unique_id=255803961 instance=ExtResource("1_cj5kg")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -42.602287, 1.9999976, 47.93406)
