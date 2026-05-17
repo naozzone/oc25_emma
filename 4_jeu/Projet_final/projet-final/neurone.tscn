@@ -1,5 +1,13 @@
 [gd_scene format=3 uid="uid://8ee7x15t5mfo"]
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0absb"]
+albedo_color = Color(0, 1, 1, 1)
+
+[sub_resource type="TextMesh" id="TextMesh_lok6f"]
+material = SubResource("StandardMaterial3D_0absb")
+text = "5"
+font_size = 127
+
 [node name="Neurone" type="Node3D" unique_id=1044392086]
 
 [node name="Base" type="CSGBox3D" parent="." unique_id=1475265855]
@@ -7,9 +15,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.144482, 1.2880249)
 size = Vector3(10, 3, 12.57605)
 
 [node name="Escalier" type="CSGBox3D" parent="Base" unique_id=1647640905]
-transform = Transform3D(1, 0, 0, 0, 0.8467229, 0.53203416, 0, -0.53203416, 0.8467229, 3.5742412, 1.1445602, -3.4120164)
+transform = Transform3D(1, 0, 0, 0, 0.8467229, 0.53203416, 0, -0.53203416, 0.8467229, 2.7748637, 1.180452, -4.0763144)
 operation = 2
-size = Vector3(1, 2.34729, 5.4075317)
+size = Vector3(2.598755, 3.1149292, 6.494293)
 
 [node name="Base2" type="CSGBox3D" parent="." unique_id=895165944]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.144482, -22.388607)
@@ -35,3 +43,51 @@ size = Vector3(1, 20, 35)
 [node name="LongMur2" type="CSGBox3D" parent="." unique_id=400804540]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.578818, 3.8129363, -9.826678)
 size = Vector3(1, 20, 35)
+
+[node name="PetitMur" type="CSGBox3D" parent="." unique_id=1009582648]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5209122, 3.8354998, 7.4800205)
+size = Vector3(10, 20, 1)
+
+[node name="PetitMur2" type="CSGBox3D" parent="." unique_id=304919960]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5209122, 3.8354998, -27.17587)
+size = Vector3(10, 20, 1)
+
+[node name="5Box" type="CSGBox3D" parent="." unique_id=893983096]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.65018153, -1.992028, -7.175623)
+size = Vector3(2.8, 2.8, 2.8)
+
+[node name="Numéro5" type="MeshInstance3D" parent="5Box" unique_id=1029306303]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, -1.3998528)
+mesh = SubResource("TextMesh_lok6f")
+
+[node name="Numéro5_3" type="MeshInstance3D" parent="5Box" unique_id=2019863899]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.4485898)
+mesh = SubResource("TextMesh_lok6f")
+
+[node name="Numéro5_2" type="MeshInstance3D" parent="5Box" unique_id=1125688577]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 1.4552183, 0, -0.0044641495)
+mesh = SubResource("TextMesh_lok6f")
+
+[node name="Numéro5_4" type="MeshInstance3D" parent="5Box" unique_id=1391659250]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -1.4289627, 0, 0.03968239)
+mesh = SubResource("TextMesh_lok6f")
+
+[node name="5Box2" type="CSGBox3D" parent="." unique_id=189351793]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.3871925, 1.5185521, -1.756577)
+size = Vector3(2.8, 2.8, 2.8)
+
+[node name="Numéro5" type="MeshInstance3D" parent="5Box2" unique_id=1881888159]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, -1.3998528)
+mesh = SubResource("TextMesh_lok6f")
+
+[node name="Numéro5_3" type="MeshInstance3D" parent="5Box2" unique_id=525336045]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.4485898)
+mesh = SubResource("TextMesh_lok6f")
+
+[node name="Numéro5_2" type="MeshInstance3D" parent="5Box2" unique_id=1769280059]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 1.4552183, 0, -0.0044641495)
+mesh = SubResource("TextMesh_lok6f")
+
+[node name="Numéro5_4" type="MeshInstance3D" parent="5Box2" unique_id=2084381438]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -1.4289627, 0, 0.03968239)
+mesh = SubResource("TextMesh_lok6f")
