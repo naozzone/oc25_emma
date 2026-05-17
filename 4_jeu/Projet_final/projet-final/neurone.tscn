@@ -1,52 +1,37 @@
 [gd_scene format=3 uid="uid://8ee7x15t5mfo"]
 
-[ext_resource type="Script" uid="uid://qyx2p7whwx6g" path="res://neurone.gd" id="1_lok6f"]
+[node name="Neurone" type="Node3D" unique_id=1044392086]
 
-[sub_resource type="SphereMesh" id="SphereMesh_0absb"]
+[node name="Base" type="CSGBox3D" parent="." unique_id=1475265855]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.144482, 1.2880249)
+size = Vector3(10, 3, 12.57605)
 
-[sub_resource type="CylinderMesh" id="CylinderMesh_lok6f"]
+[node name="Escalier" type="CSGBox3D" parent="Base" unique_id=1647640905]
+transform = Transform3D(1, 0, 0, 0, 0.8467229, 0.53203416, 0, -0.53203416, 0.8467229, 3.5742412, 1.1445602, -3.4120164)
+operation = 2
+size = Vector3(1, 2.34729, 5.4075317)
 
-[node name="Neurone" type="Node3D" unique_id=577451966]
-script = ExtResource("1_lok6f")
+[node name="Base2" type="CSGBox3D" parent="." unique_id=895165944]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.144482, -22.388607)
+size = Vector3(10, 3, 10)
 
-[node name="InputNeuron" type="MeshInstance3D" parent="." unique_id=1075056064]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 0)
-mesh = SubResource("SphereMesh_0absb")
+[node name="Sol" type="CSGBox3D" parent="." unique_id=1136587386]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -5.014496, -9.973376)
+size = Vector3(10, 3, 35)
 
-[node name="HiddenNeuron" type="MeshInstance3D" parent="." unique_id=1643488671]
-mesh = SubResource("SphereMesh_0absb")
+[node name="ContextLabel" type="Label3D" parent="." unique_id=431926449]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.9042304, 2.9820342)
+text = "Tu es une LLM en phase d'entraînement"
 
-[node name="OutputNeuron" type="MeshInstance3D" parent="." unique_id=1115063413]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 0)
-mesh = SubResource("SphereMesh_0absb")
-
-[node name="Connection" type="MeshInstance3D" parent="." unique_id=1153322427]
-transform = Transform3D(-4.371139e-09, -1.5, 0, 0.1, -6.556708e-08, 0, 0, 0, 0.1, -1.5, 0, 0)
-mesh = SubResource("CylinderMesh_lok6f")
-
-[node name="Connection2" type="MeshInstance3D" parent="." unique_id=1839233310]
-transform = Transform3D(-4.371139e-09, -1.5, 0, 0.1, -6.556708e-08, 0, 0, 0, 0.1, -1.5, 0, 0)
-mesh = SubResource("CylinderMesh_lok6f")
-
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1351012275]
-
-[node name="Control" type="Control" parent="CanvasLayer" unique_id=985686597]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="GoalLabel" type="Label3D" parent="CanvasLayer/Control" unique_id=1725767818]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.7946602, 0)
-text = "Obtenir y = 10
+[node name="GoalLabel" type="Label3D" parent="." unique_id=838582639]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.719969, -3.0387123)
+text = "Ajuster les poids pour obtenir 10
 "
 
-[node name="WeightSlider" type="HSlider" parent="CanvasLayer/Control" unique_id=2024784969]
-layout_mode = 0
-offset_right = 8.0
-offset_bottom = 16.0
-min_value = -5.0
-max_value = 5.0
-step = 0.1
+[node name="LongMur" type="CSGBox3D" parent="." unique_id=1759124854]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.2818923, 3.8129363, -9.826678)
+size = Vector3(1, 20, 35)
 
-[node name="ResultLabel" type="Label3D" parent="CanvasLayer/Control" unique_id=1030681968]
+[node name="LongMur2" type="CSGBox3D" parent="." unique_id=400804540]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.578818, 3.8129363, -9.826678)
+size = Vector3(1, 20, 35)
