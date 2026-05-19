@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://8ee7x15t5mfo"]
+[gd_scene format=3 uid="uid://brys2yeqadfyt"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_0absb"]
 
@@ -114,12 +114,12 @@ use_collision = true
 size = Vector3(20, 3, 42.731567)
 
 [node name="ContextLabel" type="Label3D" parent="." unique_id=431926449]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.9042304, 10.27992)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.9042304, 8.663418)
 text = "
 Tu es une LLM en phase d'entraînement"
 
 [node name="ContrôlesLabel" type="Label3D" parent="." unique_id=596992780]
-transform = Transform3D(1, 0, 0, 0, -0.010820761, 0.99994147, 0, -0.99994147, -0.010820761, 0, -0.62561536, 11.536463)
+transform = Transform3D(1, 0, 0, 0, 0.9845979, -0.17483415, 0, 0.17483415, 0.9845979, 0, 0.9923245, 11.536463)
 text = "Flèches pour bouger
 Souris pour bouger la camera
 Espace pour sauter"
