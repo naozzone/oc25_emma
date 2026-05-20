@@ -1,5 +1,11 @@
 [gd_scene format=3 uid="uid://brys2yeqadfyt"]
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lok6f"]
+transparency = 3
+alpha_hash_scale = 1.0
+alpha_antialiasing_mode = 0
+albedo_color = Color(0, 0.9098039, 0.9098039, 0.35686275)
+
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_0absb"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_lok6f"]
@@ -87,8 +93,11 @@ font_size = 80
 
 [node name="Neurone" type="Node3D" unique_id=1044392086]
 
+[node name="DirectionalLight3D2" type="DirectionalLight3D" parent="." unique_id=6337714]
+transform = Transform3D(1, 0, 0, 0, -0.0009948313, 0.9999996, 0, -0.9999996, -0.0009948313, 0, 14.27507, -27.151518)
+
 [node name="Base" type="CSGBox3D" parent="." unique_id=1475265855]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.144482, 5.418076)
+transform = Transform3D(0.99999595, 0.0002026749, -0.002830579, -0.0001860521, 0.9999827, 0.0058786147, 0.0028317203, -0.0058780652, 0.9999787, 0, -2.144482, 5.418076)
 use_collision = true
 size = Vector3(20, 3, 20)
 
@@ -98,20 +107,19 @@ operation = 2
 size = Vector3(2.598755, 3.1149292, 6.494293)
 
 [node name="Base2" type="CSGBox3D" parent="." unique_id=895165944]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.144482, -22.388607)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.144482, -28.957943)
 use_collision = true
-size = Vector3(20, 3, 10)
+size = Vector3(20, 3, 23.138672)
 
 [node name="Sol" type="CSGBox3D" parent="." unique_id=1136587386]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -5.014496, -6.1075926)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -5.014496, -35.628178)
 use_collision = true
-size = Vector3(20, 3, 42.731567)
+size = Vector3(20, 3, 101.772736)
 
 [node name="Plafond" type="CSGBox3D" parent="." unique_id=2093185302]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 14.424564, -6.1075926)
-visible = false
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 14.424564, -34.722553)
 use_collision = true
-size = Vector3(20, 3, 42.731567)
+size = Vector3(20, 3, 99.96149)
 
 [node name="ContextLabel" type="Label3D" parent="." unique_id=431926449]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.9042304, 8.663418)
@@ -130,14 +138,14 @@ text = "Ajuster les poids pour obtenir 10
 "
 
 [node name="LongMur" type="CSGBox3D" parent="." unique_id=1759124854]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.40196, 3.8129363, -6.0705748)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.40196, 3.8129363, -35.13564)
 use_collision = true
-size = Vector3(1, 20, 42.512207)
+size = Vector3(1, 20, 100.642334)
 
 [node name="LongMur2" type="CSGBox3D" parent="." unique_id=400804540]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.593851, 3.8129363, -5.9123716)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.593851, 3.8129363, -35.0602)
 use_collision = true
-size = Vector3(1, 20, 42.828613)
+size = Vector3(1, 20, 101.12427)
 
 [node name="PetitMur" type="CSGBox3D" parent="." unique_id=1009582648]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5209122, 3.8354998, 15.063265)
@@ -145,9 +153,9 @@ use_collision = true
 size = Vector3(20, 20, 1)
 
 [node name="PetitMur2" type="CSGBox3D" parent="." unique_id=304919960]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5209122, 3.8354998, -27.17587)
-use_collision = true
-size = Vector3(20, 20, 1)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.19661713, 6.5641375, -27.17587)
+size = Vector3(18.564941, 14.542725, 1)
+material = SubResource("StandardMaterial3D_lok6f")
 
 [node name="5Box" type="RigidBody3D" parent="." unique_id=1530655694]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.65018153, -1.992028, -13.991281)
