@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://bwfdlp85pb0ep" path="res://serveur.tscn" id="3_h2yge"]
 [ext_resource type="PackedScene" uid="uid://dvrrmmj0ggotw" path="res://plateforme.tscn" id="4_1bvp3"]
 [ext_resource type="PackedScene" uid="uid://brys2yeqadfyt" path="res://neurone.tscn" id="5_lquwl"]
+[ext_resource type="PackedScene" uid="uid://wc1v6xirj0o1" path="res://transition_histoire.tscn" id="6_7mycd"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_0xm2m"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -30,7 +31,7 @@ shadow_enabled = true
 environment = SubResource("Environment_1bvp3")
 
 [node name="ProtoController" parent="." unique_id=2021529420 instance=ExtResource("2_h2yge")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 117.37309, -10.136645, -89.57234)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.931416, -10.136645, -72.09449)
 
 [node name="DataCenter" parent="." unique_id=683001788 instance=ExtResource("1_0xm2m")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4483627, -0.23155785, -1.7449522)
@@ -38,8 +39,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4483627, -0.23155785, -1.74
 [node name="Serveur" parent="." unique_id=907864642 instance=ExtResource("3_h2yge")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.969313, 1.7499924, 10.215578)
 
-[node name="GPU" parent="." unique_id=146931932 instance=ExtResource("4_1bvp3")]
+[node name="Plateforme" parent="." unique_id=146931932 instance=ExtResource("4_1bvp3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 302.84067, 95.5829, -134.19325)
 
 [node name="Neurone" parent="." unique_id=1044392086 instance=ExtResource("5_lquwl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 116.80904, -11.163494, -101.1951)
+
+[node name="TransitionHistoire" parent="." unique_id=943188433 instance=ExtResource("6_7mycd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.523209, -15.031807, -80.9348)
