@@ -2,8 +2,47 @@
 
 [ext_resource type="PackedScene" uid="uid://bwfdlp85pb0ep" path="res://serveur.tscn" id="1_cj5kg"]
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_iveb2"]
+albedo_color = Color(0.45064825, 0.4506483, 0.45064813, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_s1gqr"]
+albedo_color = Color(0.16862746, 0.16862746, 0.16862746, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_n6bwr"]
+albedo_color = Color(0.16924527, 0.1692453, 0.16924527, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qfrnv"]
+albedo_color = Color(0.16924527, 0.1692453, 0.16924527, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3msh6"]
+albedo_color = Color(0.16924527, 0.1692453, 0.16924527, 1)
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xkuxl"]
 albedo_color = Color(0.5154445, 0.33673406, 0.11010771, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_c8rh8"]
+albedo_color = Color(0.16924527, 0.1692453, 0.16924527, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fry2b"]
+albedo_color = Color(0.16924527, 0.1692453, 0.16924527, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ba7r1"]
+albedo_color = Color(0.16924527, 0.1692453, 0.16924527, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_t1631"]
+albedo_color = Color(0.16924527, 0.1692453, 0.16924527, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8hgi2"]
+albedo_color = Color(0.16924527, 0.1692453, 0.16924527, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fs3h8"]
+albedo_color = Color(0.16924527, 0.1692453, 0.16924527, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_t1bb3"]
+albedo_color = Color(0.16924527, 0.1692453, 0.16924527, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_opcvf"]
+albedo_color = Color(0.16924527, 0.1692453, 0.16924527, 1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cj5kg"]
 albedo_color = Color(0.22352941, 0.15686275, 0.039215688, 1)
@@ -75,23 +114,28 @@ shadow_enabled = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.629272, 0, 26.483578)
 use_collision = true
 size = Vector3(45, 1, 45)
+material = SubResource("StandardMaterial3D_iveb2")
 
 [node name="Plafond" type="CSGBox3D" parent="." unique_id=611383609]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.939133, 9.88204, 26.086609)
 use_collision = true
 size = Vector3(45, 1, 45)
+material = SubResource("StandardMaterial3D_s1gqr")
 
 [node name="Mur" type="CSGBox3D" parent="." unique_id=580468049]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.65905, 5.3, 48.94597)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.326433, 4.864272, 48.570602)
 size = Vector3(45, 10, 1)
+material = SubResource("StandardMaterial3D_n6bwr")
 
 [node name="Mur2" type="CSGBox3D" parent="." unique_id=339256915]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.40559, 5.2333736, 3.5412912)
 size = Vector3(45, 10, 1)
+material = SubResource("StandardMaterial3D_qfrnv")
 
 [node name="Mur3" type="CSGBox3D" parent="." unique_id=844160036]
 transform = Transform3D(-0.00031413045, 0, -1, 0, 1, 0, 1, 0, -0.00031413045, -4.10182, 5.21185, 26.40829)
 size = Vector3(45, 10, 1)
+material = SubResource("StandardMaterial3D_3msh6")
 
 [node name="Porte2" type="CSGBox3D" parent="Mur3" unique_id=592320969]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.73231506, -3.6358924, 0.036849976)
@@ -101,6 +145,7 @@ material = SubResource("StandardMaterial3D_xkuxl")
 [node name="Mur4" type="CSGBox3D" parent="." unique_id=1366193074]
 transform = Transform3D(-0.00031413045, 0, -1, 0, 1, 0, 1, 0, -0.00031413045, -48.89193, 5.2957706, 25.976543)
 size = Vector3(45, 10, 1)
+material = SubResource("StandardMaterial3D_c8rh8")
 
 [node name="Porte2" type="CSGBox3D" parent="Mur4" unique_id=1493985124]
 transform = Transform3D(-0.00031413042, 0, 0.9999999, 0, 1, 0, -0.9999999, 0, -0.00031413042, 6.44112, -3.8350115, -0.025688171)
@@ -119,33 +164,40 @@ spot_angle = 12.876276
 [node name="MiniMur" type="CSGBox3D" parent="Salles" unique_id=440805238]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -39.867615, 5.338869, 35.097057)
 size = Vector3(20, 10, 1)
+material = SubResource("StandardMaterial3D_fry2b")
 
 [node name="Porte" type="CSGBox3D" parent="Salles/MiniMur" unique_id=893387032]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.625637, -3.7775443, 0)
 operation = 2
 size = Vector3(1.4, 2.2, 1)
+material = SubResource("StandardMaterial3D_ba7r1")
 
 [node name="Porte2" type="CSGBox3D" parent="Salles/MiniMur" unique_id=1957260784]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.558262, -3.790736, 0)
 operation = 2
 size = Vector3(1.4, 2.2, 1)
+material = SubResource("StandardMaterial3D_t1631")
 
 [node name="MiniMur2" type="CSGBox3D" parent="Salles" unique_id=654361198]
 transform = Transform3D(-0.02129136, 0, -0.9997733, 0, 1, 0, 0.9997733, 0, -0.02129136, -30.339487, 5.2194147, 39.575626)
 size = Vector3(20.209106, 10, 1)
+material = SubResource("StandardMaterial3D_8hgi2")
 
 [node name="MiniMur4" type="CSGBox3D" parent="Salles" unique_id=1300986642]
 transform = Transform3D(-0.02129136, 0, -0.9997733, 0, 1, 0, 0.9997733, 0, -0.02129136, -40.8991, 5.2194147, 42.064545)
 size = Vector3(14.598389, 10, 1)
+material = SubResource("StandardMaterial3D_fs3h8")
 
 [node name="MiniMur3" type="CSGBox3D" parent="Salles" unique_id=1946313306]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -39.867615, 5.37247, 29.986137)
 size = Vector3(20, 10, 1)
+material = SubResource("StandardMaterial3D_t1bb3")
 
 [node name="Porte" type="CSGBox3D" parent="Salles/MiniMur3" unique_id=542052972]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.3648987, -4.001582, 0)
 operation = 2
 size = Vector3(1.4, 2.2, 1)
+material = SubResource("StandardMaterial3D_opcvf")
 
 [node name="Bureau" type="CSGCombiner3D" parent="Salles" unique_id=1304722987]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -44.305653, 0.42001188, 47.820305)

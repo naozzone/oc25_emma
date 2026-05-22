@@ -15,22 +15,23 @@ albedo_color = Color(0, 0, 0, 1)
 [node name="TransitionHistoire" type="Node3D" unique_id=943188433]
 
 [node name="Sol" type="CSGBox3D" parent="." unique_id=604224219]
-size = Vector3(10, 1, 50)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 10.516113)
+size = Vector3(10, 1, 28.967773)
 material = SubResource("StandardMaterial3D_dxml1")
 
 [node name="Plafond" type="CSGBox3D" parent="." unique_id=1739298310]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9.837492, 0)
-size = Vector3(10, 1, 50)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9.837492, 10.579346)
+size = Vector3(10, 1, 28.841309)
 material = SubResource("StandardMaterial3D_dxml1")
 
 [node name="LongMur" type="CSGBox3D" parent="." unique_id=2094361216]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.30766, 4.486286, 0)
-size = Vector3(1, 10, 50)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.30766, 4.486286, 10.532928)
+size = Vector3(1, 10, 28.934143)
 material = SubResource("StandardMaterial3D_nb4id")
 
 [node name="LongMur2" type="CSGBox3D" parent="." unique_id=1058040795]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.449174, 4.486286, 0)
-size = Vector3(1, 10, 50)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.449174, 4.486286, 10.954132)
+size = Vector3(1, 10, 28.091736)
 material = SubResource("StandardMaterial3D_mwiqi")
 
 [node name="PetitMur" type="CSGBox3D" parent="." unique_id=2060086123]
@@ -39,7 +40,7 @@ size = Vector3(11, 10, 1)
 material = SubResource("StandardMaterial3D_mnao4")
 
 [node name="PetitMur2" type="CSGBox3D" parent="." unique_id=1249735912]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.4307933, -25.21144)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.4307933, -3.5016973)
 size = Vector3(11, 10, 1)
 material = SubResource("StandardMaterial3D_mnao4")
 
@@ -62,10 +63,17 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.537878, 10.434093)
 text = "Il faut que j'aille voir ce qu'il se passe"
 
 [node name="Label3D5" type="Label3D" parent="." unique_id=385196327]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.537878, 8.3148365)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.537878, 7.3458786)
 text = "Est-ce que c'est un espion américain ? 
 A-t-il été envoyé par Musk ?"
 
 [node name="Label3D6" type="Label3D" parent="." unique_id=1582947463]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.537878, 5.3067408)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.537878, 3.646885)
 text = "Qu'est-ce qui a été touché dans la salle des serveurs ?"
+
+[node name="SpotLight3D" type="SpotLight3D" parent="." unique_id=1497092759]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 6.5587234, 7.70107)
+light_color = Color(1, 0, 0, 1)
+light_energy = 16.0
+spot_range = 7.747378
+spot_angle = 39.30897
