@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://bkorafkskqvlk" path="res://data_center.tscn" id="1_0xm2m"]
 [ext_resource type="PackedScene" uid="uid://bs72ogkvdd7d6" path="res://addons/proto_controller2/proto_controller.tscn" id="2_h2yge"]
 [ext_resource type="PackedScene" uid="uid://bwfdlp85pb0ep" path="res://serveur.tscn" id="3_h2yge"]
-[ext_resource type="PackedScene" path="res://gpu1.tscn" id="4_1bvp3"]
+[ext_resource type="PackedScene" uid="uid://dvrrmmj0ggotw" path="res://plateforme.tscn" id="4_1bvp3"]
 [ext_resource type="PackedScene" uid="uid://brys2yeqadfyt" path="res://neurone.tscn" id="5_lquwl"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_0xm2m"]
@@ -23,14 +23,14 @@ glow_enabled = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 20.587978, 0)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1270319367]
-transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 27.193905, 0)
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 43.445053, 27.193905, 0)
 shadow_enabled = true
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=494163163]
 environment = SubResource("Environment_1bvp3")
 
 [node name="ProtoController" parent="." unique_id=2021529420 instance=ExtResource("2_h2yge")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 116.211105, -11.0447035, -88.65029)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 117.37309, -10.136645, -89.57234)
 
 [node name="DataCenter" parent="." unique_id=683001788 instance=ExtResource("1_0xm2m")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.10746539, 0, -1.2144728)

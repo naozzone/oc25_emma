@@ -1,0 +1,71 @@
+[gd_scene format=3 uid="uid://wc1v6xirj0o1"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dxml1"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nb4id"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mwiqi"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mnao4"]
+albedo_color = Color(0, 0, 0, 1)
+
+[node name="TransitionHistoire" type="Node3D" unique_id=943188433]
+
+[node name="Sol" type="CSGBox3D" parent="." unique_id=604224219]
+size = Vector3(10, 1, 50)
+material = SubResource("StandardMaterial3D_dxml1")
+
+[node name="Plafond" type="CSGBox3D" parent="." unique_id=1739298310]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9.837492, 0)
+size = Vector3(10, 1, 50)
+material = SubResource("StandardMaterial3D_dxml1")
+
+[node name="LongMur" type="CSGBox3D" parent="." unique_id=2094361216]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.30766, 4.486286, 0)
+size = Vector3(1, 10, 50)
+material = SubResource("StandardMaterial3D_nb4id")
+
+[node name="LongMur2" type="CSGBox3D" parent="." unique_id=1058040795]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.449174, 4.486286, 0)
+size = Vector3(1, 10, 50)
+material = SubResource("StandardMaterial3D_mwiqi")
+
+[node name="PetitMur" type="CSGBox3D" parent="." unique_id=2060086123]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.4307933, 25.097092)
+size = Vector3(11, 10, 1)
+material = SubResource("StandardMaterial3D_mnao4")
+
+[node name="PetitMur2" type="CSGBox3D" parent="." unique_id=1249735912]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.4307933, -25.21144)
+size = Vector3(11, 10, 1)
+material = SubResource("StandardMaterial3D_mnao4")
+
+[node name="Label3D" type="Label3D" parent="." unique_id=1469711390]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.537878, 19.221012)
+text = "ALERTE
+Chute drastique des scores des benchmarks"
+
+[node name="Label3D2" type="Label3D" parent="." unique_id=860179593]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.537878, 16.739649)
+text = "ALERTE
+Intrusion dans le data center"
+
+[node name="Label3D3" type="Label3D" parent="." unique_id=1992747446]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.537878, 13.973013)
+text = "Interruption de l'entraînement du LLM"
+
+[node name="Label3D4" type="Label3D" parent="." unique_id=167807889]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.537878, 10.434093)
+text = "Il faut que j'aille voir ce qu'il se passe"
+
+[node name="Label3D5" type="Label3D" parent="." unique_id=385196327]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.537878, 8.3148365)
+text = "Est-ce que c'est un espion américain ? 
+A-t-il été envoyé par Musk ?"
+
+[node name="Label3D6" type="Label3D" parent="." unique_id=1582947463]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.537878, 5.3067408)
+text = "Qu'est-ce qui a été touché dans la salle des serveurs ?"
