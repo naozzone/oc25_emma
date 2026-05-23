@@ -92,31 +92,55 @@ size = Vector3(11, 10, 1)
 material = SubResource("StandardMaterial3D_mnao4")
 
 [node name="Label3D" type="Label3D" parent="." unique_id=1469711390]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.537878, 19.221012)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 19.221)
 text = "ALERTE
 Chute drastique des scores des benchmarks"
 
+[node name="Fond" type="CSGBox3D" parent="Label3D" unique_id=783373934]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.07513809)
+size = Vector3(3.5, 1, 0.1)
+
 [node name="Label3D2" type="Label3D" parent="." unique_id=860179593]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.537878, 16.739649)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 16.74)
 text = "ALERTE
 Intrusion dans le data center"
 
+[node name="Fond" type="CSGBox3D" parent="Label3D2" unique_id=885128533]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.07513809)
+size = Vector3(3.5, 1, 0.1)
+
 [node name="Label3D3" type="Label3D" parent="." unique_id=1992747446]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.537878, 13.973013)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 13.973)
 text = "Interruption de l'entraînement du LLM"
 
+[node name="Fond" type="CSGBox3D" parent="Label3D3" unique_id=444883544]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.07513809)
+size = Vector3(3.5, 1, 0.1)
+
 [node name="Label3D4" type="Label3D" parent="." unique_id=167807889]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.537878, 10.434093)
-text = "Il faut que j'aille voir ce qu'il se passe"
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 10.434)
+text = "\"Il faut que j'aille voir ce qu'il se passe\""
+
+[node name="Fond" type="CSGBox3D" parent="Label3D4" unique_id=51861148]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.07513809)
+size = Vector3(3.5, 1, 0.1)
 
 [node name="Label3D5" type="Label3D" parent="." unique_id=385196327]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.537878, 7.3458786)
-text = "Est-ce que c'est un espion américain ? 
-A-t-il été envoyé par Musk ?"
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 7.346)
+text = "\"Est-ce que c'est un espion américain ? 
+A-t-il été envoyé par Musk ?\""
+
+[node name="Fond" type="CSGBox3D" parent="Label3D5" unique_id=1065124623]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.07513809)
+size = Vector3(3.5, 1, 0.1)
 
 [node name="Label3D6" type="Label3D" parent="." unique_id=1582947463]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.537878, 3.646885)
-text = "Qu'est-ce qui a été touché dans la salle des serveurs ?"
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 3.647)
+text = "\"Qu'est-ce qui a été touché dans la salle des serveurs ?\""
+
+[node name="Fond" type="CSGBox3D" parent="Label3D6" unique_id=392212500]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.018798828, 0, -0.07513809)
+size = Vector3(4.383301, 1, 0.1)
 
 [node name="SpotLight3D" type="SpotLight3D" parent="." unique_id=1497092759]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 6.5587234, 1.631958)
