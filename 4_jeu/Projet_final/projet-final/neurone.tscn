@@ -15,8 +15,8 @@ albedo_color = Color(0, 0, 0, 1)
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_a4ejt"]
 albedo_color = Color(0, 0, 0, 1)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qmd85"]
-albedo_color = Color(0, 0, 0, 1)
+[sub_resource type="BoxShape3D" id="BoxShape3D_qmd85"]
+size = Vector3(20, 3, 101)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nyexc"]
 albedo_color = Color(0, 0, 0, 1)
@@ -266,11 +266,14 @@ use_collision = true
 size = Vector3(20, 3, 17.558044)
 material = SubResource("StandardMaterial3D_a4ejt")
 
-[node name="Sol" type="CSGBox3D" parent="." unique_id=1136587386]
+[node name="Sol" type="StaticBody3D" parent="." unique_id=1610427354]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -5.014496, -35.340023)
-use_collision = true
-size = Vector3(20, 3, 101.19643)
-material = SubResource("StandardMaterial3D_qmd85")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Sol" unique_id=768212076]
+shape = SubResource("BoxShape3D_qmd85")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Sol/CollisionShape3D" unique_id=1696374553]
+size = Vector3(20, 3, 101)
 
 [node name="Plafond" type="CSGBox3D" parent="." unique_id=2093185302]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 14.424564, -34.722553)

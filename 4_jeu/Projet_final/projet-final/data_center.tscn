@@ -2,8 +2,8 @@
 
 [ext_resource type="PackedScene" uid="uid://bwfdlp85pb0ep" path="res://serveur.tscn" id="1_cj5kg"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_iveb2"]
-albedo_color = Color(0.45064825, 0.4506483, 0.45064813, 1)
+[sub_resource type="BoxShape3D" id="BoxShape3D_cj5kg"]
+size = Vector3(45, 1, 45)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_s1gqr"]
 albedo_color = Color(0.16862746, 0.16862746, 0.16862746, 1)
@@ -110,11 +110,14 @@ use_collision = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.27998, 13.361843, 0)
 shadow_enabled = true
 
-[node name="Sol" type="CSGBox3D" parent="." unique_id=1654696488]
+[node name="Sol" type="StaticBody3D" parent="." unique_id=11000562]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.629272, 0, 26.483578)
-use_collision = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Sol" unique_id=1927806253]
+shape = SubResource("BoxShape3D_cj5kg")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Sol/CollisionShape3D" unique_id=1462964667]
 size = Vector3(45, 1, 45)
-material = SubResource("StandardMaterial3D_iveb2")
 
 [node name="Plafond" type="CSGBox3D" parent="." unique_id=611383609]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.939133, 9.88204, 26.086609)

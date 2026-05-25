@@ -25,28 +25,41 @@ func _unhandled_input(event):
 		rotation_x -= event.relative.y * MOUSE_SENSIBILITY
 		rotation_x = clamp(rotation_x, deg_to_rad(-80), deg_to_rad(80))
 		
-		pivot_camera.rotation.x = rotation.x
+		pivot_camera.rotation.x = rotation_x
 	
 	if event.is_action_pressed("ui_cancel"): # Echap = libérer la souris
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
  
 func _physics_process(delta):
-	if not is_on_floor(): # gravité
+
+	if not is_on_floor():
 		velocity.y -= gravity * delta
-		
-	if Input.is_action_just_pressed("jump") and is_on_floor(): # saut
+
+	if Input.is_action_just_pressed("jump") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
-	
-	# direction
-	var input_dir = Vector3.ZERO
-	
+
+	var input_dir = Vector2.ZERO
+
 	input_dir.x = Input.get_action_strength("move_right") - Input.get_action_strength("move_left")
-	input_dir.y = Input.get_action_strength("move_backward") - Input.get_action_strength("move_forward")
-	
+	input_dir.y = Input.get_action_strength("move_forward") - Input.get_action_strength("move_backward")
+
 	var direction = Vector3.ZERO
-	
+
 	if input_dir != Vector2.ZERO:
+
 		input_dir = input_dir.normalized()
-		
+
 		var forward = -transform.basis.z
 		var right = transform.basis.x
+
+		direction = (forward * input_dir.y + right * input_dir.x).normalized()
+
+		velocity.x = direction.x * SPEED
+		velocity.z = direction.z * SPEED
+
+	else:
+
+		velocity.x = 0
+		velocity.z = 0
+
+	move_and_slide()
