@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://biw1ex41tk5tf"]
 
 [ext_resource type="PackedScene" uid="uid://bkorafkskqvlk" path="res://data_center.tscn" id="1_0xm2m"]
+[ext_resource type="PackedScene" uid="uid://cwwg6pmwdkrx7" path="res://FadeOverlay.tscn" id="2_7mycd"]
 [ext_resource type="PackedScene" uid="uid://bs72ogkvdd7d6" path="res://addons/proto_controller2/Player.tscn" id="2_h2yge"]
 [ext_resource type="PackedScene" uid="uid://dvrrmmj0ggotw" path="res://plateforme.tscn" id="4_1bvp3"]
 [ext_resource type="PackedScene" uid="uid://brys2yeqadfyt" path="res://neurone.tscn" id="5_lquwl"]
@@ -31,6 +32,8 @@ environment = SubResource("Environment_1bvp3")
 
 [node name="Player" parent="." unique_id=2021529420 instance=ExtResource("2_h2yge")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 116.02105, -11.539162, -93.846436)
+
+[node name="CanvasLayer" parent="Player" unique_id=565537606 instance=ExtResource("2_7mycd")]
 
 [node name="DataCenter" parent="." unique_id=683001788 instance=ExtResource("1_0xm2m")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4483627, -0.23155785, -1.7449522)

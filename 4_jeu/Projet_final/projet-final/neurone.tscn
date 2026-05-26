@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://brys2yeqadfyt"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jbpwe"]
-albedo_color = Color(0, 0, 0, 1)
+[sub_resource type="BoxShape3D" id="BoxShape3D_nyexc"]
+size = Vector3(20, 3, 20)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_75cue"]
 albedo_color = Color(0, 0, 0, 1)
@@ -239,14 +239,17 @@ transform = Transform3D(0.63903636, -0.015410511, -0.7690222, 0.7691766, 0.01280
 light_color = Color(0, 1, 1, 1)
 light_energy = 2.0
 
-[node name="Base" type="CSGBox3D" parent="." unique_id=1475265855]
+[node name="Base" type="StaticBody3D" parent="." unique_id=648738077]
 transform = Transform3D(0.99999595, 0.0002026749, -0.002830579, -0.0001860521, 0.9999827, 0.0058786147, 0.0028317203, -0.0058780652, 0.9999787, 0, -2.144482, 5.418076)
-use_collision = true
-size = Vector3(20, 3, 20)
-material = SubResource("StandardMaterial3D_jbpwe")
 
-[node name="Escalier" type="CSGBox3D" parent="Base" unique_id=1647640905]
-transform = Transform3D(1, 0, 0, 0, 0.8467229, 0.53203416, 0, -0.53203416, 0.8467229, 7.796271, 1.180452, -8.124254)
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Base" unique_id=1172579284]
+shape = SubResource("BoxShape3D_nyexc")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Base/CollisionShape3D" unique_id=1231978372]
+size = Vector3(20, 3, 20)
+
+[node name="Escalier" type="CSGBox3D" parent="Base/CollisionShape3D/CSGBox3D" unique_id=1647640905]
+transform = Transform3D(1, -1.1641532e-10, 0, 1.4551915e-11, 0.8467229, 0.53203416, -2.3283064e-10, -0.53203416, 0.84672296, 7.7962713, 1.1804519, -8.124255)
 operation = 2
 size = Vector3(2.598755, 3.1149292, 6.494293)
 material = SubResource("StandardMaterial3D_75cue")

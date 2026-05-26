@@ -17,7 +17,14 @@ var rotation_x := 0.0 # rotation camera
 
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED) # capture la souris dans la fenêtre
+	
+	$CanvasLayer/FadeAnimationPlayer.play("FadeIn")
 
+
+
+
+
+	
 func _unhandled_input(event):
 	if event is InputEventMouseMotion: # mouvement souris
 		rotate_y(-event.relative.x * MOUSE_SENSIBILITY)
@@ -64,28 +71,47 @@ func _physics_process(delta):
 
 	# téléportation dans "transition_histoire"
 	if Input.is_action_just_pressed("teleport1"):
+		teleport_to("TeleportPoint1")
 
-		$CanvasLayer/FadeAnimationPlayer.play("FadeOut")
-
-		await $CanvasLayer/FadeAnimationPlayer.animation_finished
-
-		velocity = Vector3.ZERO
-
-		global_position = get_parent().get_node("TeleportPoint1").global_position
-
-		$CanvasLayer/FadeAnimationPlayer.play("FadeIn")
 		
-	# téléportation dans data center
 	if Input.is_action_just_pressed("teleport2"):
+		teleport2_to("TeleportPoint2")
 
-		$CanvasLayer/FadeAnimationPlayer.play("FadeOut")
+		
+		
 
-		await $CanvasLayer/FadeAnimationPlayer.animation_finished
+	move_and_slide()
 
-		velocity = Vector3.ZERO
+func teleport_to(TeleportPoint1):
 
-		global_position = get_parent().get_node("TeleportPoint2").global_position
+	# fade noir
+	$CanvasLayer/FadeAnimationPlayer.play("FadeOut")
 
-		$CanvasLayer/FadeAnimationPlayer.play("FadeIn")
+	# attendre fin animation
+	await $CanvasLayer/FadeAnimationPlayer.animation_finished
 
-		move_and_slide()
+	# arrêter le mouvement
+	velocity = Vector3.ZERO
+
+	# téléporter
+	global_position = get_parent().get_node(TeleportPoint1).global_position
+
+	# fade retour
+	$CanvasLayer/FadeAnimationPlayer.play("FadeIn")
+	
+func teleport2_to(TeleportPoint2):
+
+	# fade noir
+	$CanvasLayer/FadeAnimationPlayer.play("FadeOut")
+
+	# attendre fin animation
+	await $CanvasLayer/FadeAnimationPlayer.animation_finished
+
+	# arrêter le mouvement
+	velocity = Vector3.ZERO
+
+	# téléporter
+	global_position = get_parent().get_node(TeleportPoint2).global_position
+
+	# fade retour
+	$CanvasLayer/FadeAnimationPlayer.play("FadeIn")
