@@ -62,4 +62,30 @@ func _physics_process(delta):
 		velocity.x = 0
 		velocity.z = 0
 
-	move_and_slide()
+	# téléportation dans "transition_histoire"
+	if Input.is_action_just_pressed("teleport1"):
+
+		$CanvasLayer/FadeAnimationPlayer.play("FadeOut")
+
+		await $CanvasLayer/FadeAnimationPlayer.animation_finished
+
+		velocity = Vector3.ZERO
+
+		global_position = get_parent().get_node("TeleportPoint1").global_position
+
+		$CanvasLayer/FadeAnimationPlayer.play("FadeIn")
+		
+	# téléportation dans data center
+	if Input.is_action_just_pressed("teleport2"):
+
+		$CanvasLayer/FadeAnimationPlayer.play("FadeOut")
+
+		await $CanvasLayer/FadeAnimationPlayer.animation_finished
+
+		velocity = Vector3.ZERO
+
+		global_position = get_parent().get_node("TeleportPoint2").global_position
+
+		$CanvasLayer/FadeAnimationPlayer.play("FadeIn")
+
+		move_and_slide()
