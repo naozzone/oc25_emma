@@ -17,6 +17,7 @@ material = SubResource("StandardMaterial3D_k6wkb")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=1477871876]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.006782651, 0.039386928, 0.52198195)
+visible = false
 light_color = Color(0, 1, 1, 1)
 light_energy = 9.5
 light_volumetric_fog_energy = 3.0
