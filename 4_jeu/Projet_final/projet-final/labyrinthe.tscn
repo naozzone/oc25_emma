@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://bj75ufv15apfn"]
+
+[node name="labyrinthe" type="CSGCombiner3D" unique_id=628365901]
+
+[node name="sol" type="CSGBox3D" parent="." unique_id=76897872]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.758301, -0.39819336, 0)
+size = Vector3(30, 1, 30)
+
+[node name="mur" type="CSGBox3D" parent="." unique_id=1493963154]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.785492, 4.2524776, 14.509928)
+size = Vector3(30, 10, 1)
+
+[node name="mur2" type="CSGBox3D" parent="." unique_id=875153546]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.785492, 4.2524776, -14.445989)
+size = Vector3(30, 10, 1)
+
+[node name="mur3" type="CSGBox3D" parent="." unique_id=452032558]
+transform = Transform3D(-0.0049043386, 0, 0.99998796, 0, 1, 0, -0.99998796, 0, -0.0049043386, -3.7828577, 4.2524776, 0.03541279)
+size = Vector3(30, 10, 1)
+
+[node name="mur4" type="CSGBox3D" parent="." unique_id=41887165]
+transform = Transform3D(-0.0049043386, 0, 0.99998796, 0, 1, 0, -0.99998796, 0, -0.0049043386, 25.342806, 4.2524776, 0.03541279)
+size = Vector3(30, 10, 1)
