@@ -31,6 +31,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.758301, -0.39819336, 9.954
 size = Vector3(30, 1, 49.9093)
 material = SubResource("StandardMaterial3D_d3kpe")
 
+[node name="toit" type="CSGBox3D" parent="." unique_id=627984312]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.758301, 8.8307, 9.954651)
+visible = false
+size = Vector3(30, 1, 49.9093)
+material = SubResource("StandardMaterial3D_d3kpe")
+
 [node name="CSGBox3D2" type="CSGBox3D" parent="." unique_id=388890561]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.73313, -1.0982647, -0.6455765)
 operation = 2
