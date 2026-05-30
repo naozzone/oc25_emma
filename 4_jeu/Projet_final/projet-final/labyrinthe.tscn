@@ -17,6 +17,7 @@ glow_enabled = true
 albedo_color = Color(0.28485027, 0.28485027, 0.28485027, 1)
 
 [node name="labyrinthe" type="CSGCombiner3D" unique_id=628365901]
+use_collision = true
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=910087971]
 environment = SubResource("Environment_bjs4c")

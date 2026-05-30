@@ -1,9 +1,12 @@
 [gd_scene format=3 uid="uid://bwfdlp85pb0ep"]
 
+[ext_resource type="Texture2D" uid="uid://52gkf2urj7ld" path="res://addons/dataserver.png" id="1_72p8s"]
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_72p8s"]
 albedo_color = Color(0, 0, 0, 1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_k6wkb"]
+albedo_texture = ExtResource("1_72p8s")
 
 [node name="Serveur" type="CSGCombiner3D" unique_id=907864642]
 
