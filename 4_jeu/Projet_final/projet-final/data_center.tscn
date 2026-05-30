@@ -2,8 +2,50 @@
 
 [ext_resource type="PackedScene" uid="uid://bwfdlp85pb0ep" path="res://serveur.tscn" id="1_cj5kg"]
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_cj5kg"]
+size = Vector3(45, 1, 45)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_iveb2"]
+albedo_color = Color(0.16924527, 0.1692453, 0.16924527, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_s1gqr"]
+albedo_color = Color(0.16862746, 0.16862746, 0.16862746, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_n6bwr"]
+albedo_color = Color(0.16924527, 0.1692453, 0.16924527, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qfrnv"]
+albedo_color = Color(0.16924527, 0.1692453, 0.16924527, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3msh6"]
+albedo_color = Color(0.16924527, 0.1692453, 0.16924527, 1)
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xkuxl"]
 albedo_color = Color(0.5154445, 0.33673406, 0.11010771, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_c8rh8"]
+albedo_color = Color(0.16924527, 0.1692453, 0.16924527, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fry2b"]
+albedo_color = Color(0.16924527, 0.1692453, 0.16924527, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ba7r1"]
+albedo_color = Color(0.16924527, 0.1692453, 0.16924527, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_t1631"]
+albedo_color = Color(0.16924527, 0.1692453, 0.16924527, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8hgi2"]
+albedo_color = Color(0.16924527, 0.1692453, 0.16924527, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fs3h8"]
+albedo_color = Color(0.16924527, 0.1692453, 0.16924527, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_t1bb3"]
+albedo_color = Color(0.16924527, 0.1692453, 0.16924527, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_opcvf"]
+albedo_color = Color(0.16924527, 0.1692453, 0.16924527, 1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cj5kg"]
 albedo_color = Color(0.22352941, 0.15686275, 0.039215688, 1)
@@ -54,31 +96,53 @@ albedo_color = Color(0, 0, 0, 1)
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_thwj7"]
 albedo_color = Color(0, 0, 0, 1)
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wkg11"]
+albedo_color = Color(1, 0, 0, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_av147"]
+albedo_color = Color(1, 1, 0, 1)
+
+[sub_resource type="PrismMesh" id="PrismMesh_iveb2"]
+material = SubResource("StandardMaterial3D_av147")
+size = Vector3(0.5, 0.5, 0.1)
+
 [node name="DataCenter" type="CSGCombiner3D" unique_id=683001788]
 use_collision = true
 
-[node name="Sol" type="CSGBox3D" parent="." unique_id=1654696488]
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=556083951]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.27998, 13.361843, 0)
+shadow_enabled = true
+
+[node name="Sol" type="StaticBody3D" parent="." unique_id=11000562]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.629272, 0, 26.483578)
-use_collision = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Sol" unique_id=1927806253]
+shape = SubResource("BoxShape3D_cj5kg")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Sol/CollisionShape3D" unique_id=1462964667]
 size = Vector3(45, 1, 45)
+material = SubResource("StandardMaterial3D_iveb2")
 
 [node name="Plafond" type="CSGBox3D" parent="." unique_id=611383609]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.939133, 9.88204, 26.086609)
-visible = false
 use_collision = true
 size = Vector3(45, 1, 45)
+material = SubResource("StandardMaterial3D_s1gqr")
 
 [node name="Mur" type="CSGBox3D" parent="." unique_id=580468049]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.65905, 5.3, 48.94597)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.326433, 4.864272, 48.570602)
 size = Vector3(45, 10, 1)
+material = SubResource("StandardMaterial3D_n6bwr")
 
 [node name="Mur2" type="CSGBox3D" parent="." unique_id=339256915]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.40559, 5.2333736, 3.5412912)
 size = Vector3(45, 10, 1)
+material = SubResource("StandardMaterial3D_qfrnv")
 
 [node name="Mur3" type="CSGBox3D" parent="." unique_id=844160036]
 transform = Transform3D(-0.00031413045, 0, -1, 0, 1, 0, 1, 0, -0.00031413045, -4.10182, 5.21185, 26.40829)
 size = Vector3(45, 10, 1)
+material = SubResource("StandardMaterial3D_3msh6")
 
 [node name="Porte2" type="CSGBox3D" parent="Mur3" unique_id=592320969]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.73231506, -3.6358924, 0.036849976)
@@ -88,6 +152,7 @@ material = SubResource("StandardMaterial3D_xkuxl")
 [node name="Mur4" type="CSGBox3D" parent="." unique_id=1366193074]
 transform = Transform3D(-0.00031413045, 0, -1, 0, 1, 0, 1, 0, -0.00031413045, -48.89193, 5.2957706, 25.976543)
 size = Vector3(45, 10, 1)
+material = SubResource("StandardMaterial3D_c8rh8")
 
 [node name="Porte2" type="CSGBox3D" parent="Mur4" unique_id=1493985124]
 transform = Transform3D(-0.00031413042, 0, 0.9999999, 0, 1, 0, -0.9999999, 0, -0.00031413042, 6.44112, -3.8350115, -0.025688171)
@@ -96,36 +161,50 @@ material = SubResource("StandardMaterial3D_xkuxl")
 
 [node name="Salles" type="CSGCombiner3D" parent="." unique_id=1140729824]
 
+[node name="SpotLight3D" type="SpotLight3D" parent="Salles" unique_id=1331308888]
+transform = Transform3D(1, 0, 0, 0, -0.024240192, 0.9997062, 0, -0.9997062, -0.024240192, -45.624447, 8.296748, 32.392277)
+light_color = Color(1, 1, 0.2509804, 1)
+spot_range = 8.766338
+spot_attenuation = -0.79
+spot_angle = 12.876276
+
 [node name="MiniMur" type="CSGBox3D" parent="Salles" unique_id=440805238]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -39.867615, 5.338869, 35.097057)
 size = Vector3(20, 10, 1)
+material = SubResource("StandardMaterial3D_fry2b")
 
 [node name="Porte" type="CSGBox3D" parent="Salles/MiniMur" unique_id=893387032]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.625637, -3.7775443, 0)
 operation = 2
 size = Vector3(1.4, 2.2, 1)
+material = SubResource("StandardMaterial3D_ba7r1")
 
 [node name="Porte2" type="CSGBox3D" parent="Salles/MiniMur" unique_id=1957260784]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.558262, -3.790736, 0)
 operation = 2
 size = Vector3(1.4, 2.2, 1)
+material = SubResource("StandardMaterial3D_t1631")
 
 [node name="MiniMur2" type="CSGBox3D" parent="Salles" unique_id=654361198]
 transform = Transform3D(-0.02129136, 0, -0.9997733, 0, 1, 0, 0.9997733, 0, -0.02129136, -30.339487, 5.2194147, 39.575626)
 size = Vector3(20.209106, 10, 1)
+material = SubResource("StandardMaterial3D_8hgi2")
 
 [node name="MiniMur4" type="CSGBox3D" parent="Salles" unique_id=1300986642]
 transform = Transform3D(-0.02129136, 0, -0.9997733, 0, 1, 0, 0.9997733, 0, -0.02129136, -40.8991, 5.2194147, 42.064545)
 size = Vector3(14.598389, 10, 1)
+material = SubResource("StandardMaterial3D_fs3h8")
 
 [node name="MiniMur3" type="CSGBox3D" parent="Salles" unique_id=1946313306]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -39.867615, 5.37247, 29.986137)
 size = Vector3(20, 10, 1)
+material = SubResource("StandardMaterial3D_t1bb3")
 
 [node name="Porte" type="CSGBox3D" parent="Salles/MiniMur3" unique_id=542052972]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.3648987, -4.001582, 0)
 operation = 2
 size = Vector3(1.4, 2.2, 1)
+material = SubResource("StandardMaterial3D_opcvf")
 
 [node name="Bureau" type="CSGCombiner3D" parent="Salles" unique_id=1304722987]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -44.305653, 0.42001188, 47.820305)
@@ -449,6 +528,242 @@ material = SubResource("StandardMaterial3D_f365v")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.25702143, -0.6247933, 0.16110879)
 radius = 0.06347881
 material = SubResource("StandardMaterial3D_thwj7")
+
+[node name="DrapeauChine" type="CSGCombiner3D" parent="Salles" unique_id=1749037588]
+transform = Transform3D(-0.026002407, 0, -0.99966186, 0, 1, 0, 0.99966186, 0, -0.026002407, -48.41243, 2.3362632, 39.798214)
+
+[node name="Toile" type="CSGBox3D" parent="Salles/DrapeauChine" unique_id=2043381582]
+transform = Transform3D(0.021919576, 0, -0.99976087, 0, 1, 0, 0.99976087, 0, 0.021919576, 0.82266235, 1.3165989, -0.010623932)
+size = Vector3(0.1, 3, 6)
+material = SubResource("StandardMaterial3D_wkg11")
+
+[node name="Etoile" type="CSGCombiner3D" parent="Salles/DrapeauChine" unique_id=1898803989]
+transform = Transform3D(1.000001, 0, 9.313226e-09, 0, 1, 0, -9.313226e-09, 0, 1.000001, 2.9198685, 2.1125083, -0.11993408)
+
+[node name="CSGMesh3D" type="CSGMesh3D" parent="Salles/DrapeauChine/Etoile" unique_id=1437485150]
+mesh = SubResource("PrismMesh_iveb2")
+
+[node name="CSGMesh3D2" type="CSGMesh3D" parent="Salles/DrapeauChine/Etoile" unique_id=1226885165]
+transform = Transform3D(-0.6846104, 0.7275849, -0.04391673, -0.7283245, -0.68523127, 0.0012439364, -0.029188033, 0.032837246, 0.9990344, 0.17748773, -0.39672092, 0)
+mesh = SubResource("PrismMesh_iveb2")
+
+[node name="CSGMesh3D3" type="CSGMesh3D" parent="Salles/DrapeauChine/Etoile" unique_id=63534791]
+transform = Transform3D(0.68521315, -0.7283164, -0.006194938, -0.72832453, -0.6852313, 0.0012439291, -0.005150903, 0.0036594719, -0.9999802, -0.14732873, -0.39672092, 0)
+mesh = SubResource("PrismMesh_iveb2")
+
+[node name="CSGMesh3D4" type="CSGMesh3D" parent="Salles/DrapeauChine/Etoile" unique_id=1853331161]
+transform = Transform3D(-0.4496391, -0.8927276, 0.029362753, -0.8931771, 0.4496632, -0.0061507244, -0.0077124536, -0.028991804, -0.99955004, -0.23144823, -0.1307782, 0)
+mesh = SubResource("PrismMesh_iveb2")
+
+[node name="CSGMesh3D5" type="CSGMesh3D" parent="Salles/DrapeauChine/Etoile" unique_id=1628655025]
+transform = Transform3D(0.39982578, 0.91659075, -0.0008356422, -0.91614085, 0.3996006, -0.031705435, -0.028727002, 0.013442261, 0.99949706, 0.27284682, -0.1307782, 0)
+mesh = SubResource("PrismMesh_iveb2")
+
+[node name="Etoile2" type="CSGCombiner3D" parent="Salles/DrapeauChine" unique_id=250629525]
+transform = Transform3D(0.40000013, 0, 5.5879354e-09, 0, 0.4, 0, -5.5879354e-09, 0, 0.40000013, 1.9759789, 2.619059, -0.09538269)
+
+[node name="CSGMesh3D" type="CSGMesh3D" parent="Salles/DrapeauChine/Etoile2" unique_id=1826766897]
+mesh = SubResource("PrismMesh_iveb2")
+
+[node name="CSGMesh3D2" type="CSGMesh3D" parent="Salles/DrapeauChine/Etoile2" unique_id=894963975]
+transform = Transform3D(-0.6846104, 0.7275849, -0.04391673, -0.7283245, -0.68523127, 0.0012439364, -0.029188033, 0.032837246, 0.9990344, 0.17748773, -0.39672092, 0)
+mesh = SubResource("PrismMesh_iveb2")
+
+[node name="CSGMesh3D3" type="CSGMesh3D" parent="Salles/DrapeauChine/Etoile2" unique_id=1391258970]
+transform = Transform3D(0.68521315, -0.7283164, -0.006194938, -0.72832453, -0.6852313, 0.0012439291, -0.005150903, 0.0036594719, -0.9999802, -0.14732873, -0.39672092, 0)
+mesh = SubResource("PrismMesh_iveb2")
+
+[node name="CSGMesh3D4" type="CSGMesh3D" parent="Salles/DrapeauChine/Etoile2" unique_id=269515938]
+transform = Transform3D(-0.4496391, -0.8927276, 0.029362753, -0.8931771, 0.4496632, -0.0061507244, -0.0077124536, -0.028991804, -0.99955004, -0.23144823, -0.1307782, 0)
+mesh = SubResource("PrismMesh_iveb2")
+
+[node name="CSGMesh3D5" type="CSGMesh3D" parent="Salles/DrapeauChine/Etoile2" unique_id=25891446]
+transform = Transform3D(0.39982578, 0.91659075, -0.0008356422, -0.91614085, 0.3996006, -0.031705435, -0.028727002, 0.013442261, 0.99949706, 0.27284682, -0.1307782, 0)
+mesh = SubResource("PrismMesh_iveb2")
+
+[node name="Etoile3" type="CSGCombiner3D" parent="Salles/DrapeauChine" unique_id=1612891989]
+transform = Transform3D(0.40000024, 0, 7.450581e-09, 0, 0.4, 0, -7.450581e-09, 0, 0.40000024, 1.6188736, 2.165934, -0.0860939)
+
+[node name="CSGMesh3D" type="CSGMesh3D" parent="Salles/DrapeauChine/Etoile3" unique_id=1907138118]
+mesh = SubResource("PrismMesh_iveb2")
+
+[node name="CSGMesh3D2" type="CSGMesh3D" parent="Salles/DrapeauChine/Etoile3" unique_id=981195827]
+transform = Transform3D(-0.6846104, 0.7275849, -0.04391673, -0.7283245, -0.68523127, 0.0012439364, -0.029188033, 0.032837246, 0.9990344, 0.17748773, -0.39672092, 0)
+mesh = SubResource("PrismMesh_iveb2")
+
+[node name="CSGMesh3D3" type="CSGMesh3D" parent="Salles/DrapeauChine/Etoile3" unique_id=800568185]
+transform = Transform3D(0.68521315, -0.7283164, -0.006194938, -0.72832453, -0.6852313, 0.0012439291, -0.005150903, 0.0036594719, -0.9999802, -0.14732873, -0.39672092, 0)
+mesh = SubResource("PrismMesh_iveb2")
+
+[node name="CSGMesh3D4" type="CSGMesh3D" parent="Salles/DrapeauChine/Etoile3" unique_id=1083416998]
+transform = Transform3D(-0.4496391, -0.8927276, 0.029362753, -0.8931771, 0.4496632, -0.0061507244, -0.0077124536, -0.028991804, -0.99955004, -0.23144823, -0.1307782, 0)
+mesh = SubResource("PrismMesh_iveb2")
+
+[node name="CSGMesh3D5" type="CSGMesh3D" parent="Salles/DrapeauChine/Etoile3" unique_id=1780054034]
+transform = Transform3D(0.39982578, 0.91659075, -0.0008356422, -0.91614085, 0.3996006, -0.031705435, -0.028727002, 0.013442261, 0.99949706, 0.27284682, -0.1307782, 0)
+mesh = SubResource("PrismMesh_iveb2")
+
+[node name="Etoile4" type="CSGCombiner3D" parent="Salles/DrapeauChine" unique_id=1907714010]
+transform = Transform3D(0.4000003, 0, 7.450581e-09, 0, 0.4, 0, -7.450581e-09, 0, 0.4000003, 1.6188736, 1.7090955, -0.0860939)
+
+[node name="CSGMesh3D" type="CSGMesh3D" parent="Salles/DrapeauChine/Etoile4" unique_id=317974941]
+mesh = SubResource("PrismMesh_iveb2")
+
+[node name="CSGMesh3D2" type="CSGMesh3D" parent="Salles/DrapeauChine/Etoile4" unique_id=383243543]
+transform = Transform3D(-0.6846104, 0.7275849, -0.04391673, -0.7283245, -0.68523127, 0.0012439364, -0.029188033, 0.032837246, 0.9990344, 0.17748773, -0.39672092, 0)
+mesh = SubResource("PrismMesh_iveb2")
+
+[node name="CSGMesh3D3" type="CSGMesh3D" parent="Salles/DrapeauChine/Etoile4" unique_id=519002587]
+transform = Transform3D(0.68521315, -0.7283164, -0.006194938, -0.72832453, -0.6852313, 0.0012439291, -0.005150903, 0.0036594719, -0.9999802, -0.14732873, -0.39672092, 0)
+mesh = SubResource("PrismMesh_iveb2")
+
+[node name="CSGMesh3D4" type="CSGMesh3D" parent="Salles/DrapeauChine/Etoile4" unique_id=163905027]
+transform = Transform3D(-0.4496391, -0.8927276, 0.029362753, -0.8931771, 0.4496632, -0.0061507244, -0.0077124536, -0.028991804, -0.99955004, -0.23144823, -0.1307782, 0)
+mesh = SubResource("PrismMesh_iveb2")
+
+[node name="CSGMesh3D5" type="CSGMesh3D" parent="Salles/DrapeauChine/Etoile4" unique_id=1997347014]
+transform = Transform3D(0.39982578, 0.91659075, -0.0008356422, -0.91614085, 0.3996006, -0.031705435, -0.028727002, 0.013442261, 0.99949706, 0.27284682, -0.1307782, 0)
+mesh = SubResource("PrismMesh_iveb2")
+
+[node name="Etoile5" type="CSGCombiner3D" parent="Salles/DrapeauChine" unique_id=816651385]
+transform = Transform3D(0.40000054, 0, 1.0244548e-08, 0, 0.4, 0, -1.0244548e-08, 0, 0.40000054, 1.9200935, 1.2871475, -0.09392166)
+
+[node name="CSGMesh3D" type="CSGMesh3D" parent="Salles/DrapeauChine/Etoile5" unique_id=1515223947]
+mesh = SubResource("PrismMesh_iveb2")
+
+[node name="CSGMesh3D2" type="CSGMesh3D" parent="Salles/DrapeauChine/Etoile5" unique_id=878846691]
+transform = Transform3D(-0.6846104, 0.7275849, -0.04391673, -0.7283245, -0.68523127, 0.0012439364, -0.029188033, 0.032837246, 0.9990344, 0.17748773, -0.39672092, 0)
+mesh = SubResource("PrismMesh_iveb2")
+
+[node name="CSGMesh3D3" type="CSGMesh3D" parent="Salles/DrapeauChine/Etoile5" unique_id=256764092]
+transform = Transform3D(0.68521315, -0.7283164, -0.006194938, -0.72832453, -0.6852313, 0.0012439291, -0.005150903, 0.0036594719, -0.9999802, -0.14732873, -0.39672092, 0)
+mesh = SubResource("PrismMesh_iveb2")
+
+[node name="CSGMesh3D4" type="CSGMesh3D" parent="Salles/DrapeauChine/Etoile5" unique_id=1658026719]
+transform = Transform3D(-0.4496391, -0.8927276, 0.029362753, -0.8931771, 0.4496632, -0.0061507244, -0.0077124536, -0.028991804, -0.99955004, -0.23144823, -0.1307782, 0)
+mesh = SubResource("PrismMesh_iveb2")
+
+[node name="CSGMesh3D5" type="CSGMesh3D" parent="Salles/DrapeauChine/Etoile5" unique_id=1366096839]
+transform = Transform3D(0.39982578, 0.91659075, -0.0008356422, -0.91614085, 0.3996006, -0.031705435, -0.028727002, 0.013442261, 0.99949706, 0.27284682, -0.1307782, 0)
+mesh = SubResource("PrismMesh_iveb2")
+
+[node name="DrapeauChine2" type="CSGCombiner3D" parent="Salles" unique_id=1650749932]
+transform = Transform3D(0.9999994, 0, 0.0011869036, 0, 1, 0, -0.0011869036, 0, 0.9999994, -36.378357, 2.3362632, 29.376019)
+
+[node name="Toile" type="CSGBox3D" parent="Salles/DrapeauChine2" unique_id=1230657751]
+transform = Transform3D(0.021919576, 0, -0.99976087, 0, 1, 0, 0.99976087, 0, 0.021919576, 0.82266235, 1.3165989, -0.010623932)
+size = Vector3(0.1, 3, 6)
+material = SubResource("StandardMaterial3D_wkg11")
+
+[node name="Etoile" type="CSGCombiner3D" parent="Salles/DrapeauChine2" unique_id=1185410402]
+transform = Transform3D(1.000001, 0, 9.313226e-09, 0, 1, 0, -9.313226e-09, 0, 1.000001, 2.9198685, 2.1125083, -0.11993408)
+
+[node name="CSGMesh3D" type="CSGMesh3D" parent="Salles/DrapeauChine2/Etoile" unique_id=56569285]
+mesh = SubResource("PrismMesh_iveb2")
+
+[node name="CSGMesh3D2" type="CSGMesh3D" parent="Salles/DrapeauChine2/Etoile" unique_id=360011026]
+transform = Transform3D(-0.6846104, 0.7275849, -0.04391673, -0.7283245, -0.68523127, 0.0012439364, -0.029188033, 0.032837246, 0.9990344, 0.17748773, -0.39672092, 0)
+mesh = SubResource("PrismMesh_iveb2")
+
+[node name="CSGMesh3D3" type="CSGMesh3D" parent="Salles/DrapeauChine2/Etoile" unique_id=994783625]
+transform = Transform3D(0.68521315, -0.7283164, -0.006194938, -0.72832453, -0.6852313, 0.0012439291, -0.005150903, 0.0036594719, -0.9999802, -0.14732873, -0.39672092, 0)
+mesh = SubResource("PrismMesh_iveb2")
+
+[node name="CSGMesh3D4" type="CSGMesh3D" parent="Salles/DrapeauChine2/Etoile" unique_id=1736221712]
+transform = Transform3D(-0.4496391, -0.8927276, 0.029362753, -0.8931771, 0.4496632, -0.0061507244, -0.0077124536, -0.028991804, -0.99955004, -0.23144823, -0.1307782, 0)
+mesh = SubResource("PrismMesh_iveb2")
+
+[node name="CSGMesh3D5" type="CSGMesh3D" parent="Salles/DrapeauChine2/Etoile" unique_id=851351823]
+transform = Transform3D(0.39982578, 0.91659075, -0.0008356422, -0.91614085, 0.3996006, -0.031705435, -0.028727002, 0.013442261, 0.99949706, 0.27284682, -0.1307782, 0)
+mesh = SubResource("PrismMesh_iveb2")
+
+[node name="Etoile2" type="CSGCombiner3D" parent="Salles/DrapeauChine2" unique_id=1982797044]
+transform = Transform3D(0.40000013, 0, 5.5879354e-09, 0, 0.4, 0, -5.5879354e-09, 0, 0.40000013, 1.9759789, 2.619059, -0.09538269)
+
+[node name="CSGMesh3D" type="CSGMesh3D" parent="Salles/DrapeauChine2/Etoile2" unique_id=1407080011]
+mesh = SubResource("PrismMesh_iveb2")
+
+[node name="CSGMesh3D2" type="CSGMesh3D" parent="Salles/DrapeauChine2/Etoile2" unique_id=80952335]
+transform = Transform3D(-0.6846104, 0.7275849, -0.04391673, -0.7283245, -0.68523127, 0.0012439364, -0.029188033, 0.032837246, 0.9990344, 0.17748773, -0.39672092, 0)
+mesh = SubResource("PrismMesh_iveb2")
+
+[node name="CSGMesh3D3" type="CSGMesh3D" parent="Salles/DrapeauChine2/Etoile2" unique_id=1830305965]
+transform = Transform3D(0.68521315, -0.7283164, -0.006194938, -0.72832453, -0.6852313, 0.0012439291, -0.005150903, 0.0036594719, -0.9999802, -0.14732873, -0.39672092, 0)
+mesh = SubResource("PrismMesh_iveb2")
+
+[node name="CSGMesh3D4" type="CSGMesh3D" parent="Salles/DrapeauChine2/Etoile2" unique_id=1181925896]
+transform = Transform3D(-0.4496391, -0.8927276, 0.029362753, -0.8931771, 0.4496632, -0.0061507244, -0.0077124536, -0.028991804, -0.99955004, -0.23144823, -0.1307782, 0)
+mesh = SubResource("PrismMesh_iveb2")
+
+[node name="CSGMesh3D5" type="CSGMesh3D" parent="Salles/DrapeauChine2/Etoile2" unique_id=2102641038]
+transform = Transform3D(0.39982578, 0.91659075, -0.0008356422, -0.91614085, 0.3996006, -0.031705435, -0.028727002, 0.013442261, 0.99949706, 0.27284682, -0.1307782, 0)
+mesh = SubResource("PrismMesh_iveb2")
+
+[node name="Etoile3" type="CSGCombiner3D" parent="Salles/DrapeauChine2" unique_id=1720315309]
+transform = Transform3D(0.40000024, 0, 7.450581e-09, 0, 0.4, 0, -7.450581e-09, 0, 0.40000024, 1.6188736, 2.165934, -0.0860939)
+
+[node name="CSGMesh3D" type="CSGMesh3D" parent="Salles/DrapeauChine2/Etoile3" unique_id=216117765]
+mesh = SubResource("PrismMesh_iveb2")
+
+[node name="CSGMesh3D2" type="CSGMesh3D" parent="Salles/DrapeauChine2/Etoile3" unique_id=1892695942]
+transform = Transform3D(-0.6846104, 0.7275849, -0.04391673, -0.7283245, -0.68523127, 0.0012439364, -0.029188033, 0.032837246, 0.9990344, 0.17748773, -0.39672092, 0)
+mesh = SubResource("PrismMesh_iveb2")
+
+[node name="CSGMesh3D3" type="CSGMesh3D" parent="Salles/DrapeauChine2/Etoile3" unique_id=1841720697]
+transform = Transform3D(0.68521315, -0.7283164, -0.006194938, -0.72832453, -0.6852313, 0.0012439291, -0.005150903, 0.0036594719, -0.9999802, -0.14732873, -0.39672092, 0)
+mesh = SubResource("PrismMesh_iveb2")
+
+[node name="CSGMesh3D4" type="CSGMesh3D" parent="Salles/DrapeauChine2/Etoile3" unique_id=352060246]
+transform = Transform3D(-0.4496391, -0.8927276, 0.029362753, -0.8931771, 0.4496632, -0.0061507244, -0.0077124536, -0.028991804, -0.99955004, -0.23144823, -0.1307782, 0)
+mesh = SubResource("PrismMesh_iveb2")
+
+[node name="CSGMesh3D5" type="CSGMesh3D" parent="Salles/DrapeauChine2/Etoile3" unique_id=321080288]
+transform = Transform3D(0.39982578, 0.91659075, -0.0008356422, -0.91614085, 0.3996006, -0.031705435, -0.028727002, 0.013442261, 0.99949706, 0.27284682, -0.1307782, 0)
+mesh = SubResource("PrismMesh_iveb2")
+
+[node name="Etoile4" type="CSGCombiner3D" parent="Salles/DrapeauChine2" unique_id=1309834120]
+transform = Transform3D(0.4000003, 0, 7.450581e-09, 0, 0.4, 0, -7.450581e-09, 0, 0.4000003, 1.6188736, 1.7090955, -0.0860939)
+
+[node name="CSGMesh3D" type="CSGMesh3D" parent="Salles/DrapeauChine2/Etoile4" unique_id=2036428028]
+mesh = SubResource("PrismMesh_iveb2")
+
+[node name="CSGMesh3D2" type="CSGMesh3D" parent="Salles/DrapeauChine2/Etoile4" unique_id=1832576735]
+transform = Transform3D(-0.6846104, 0.7275849, -0.04391673, -0.7283245, -0.68523127, 0.0012439364, -0.029188033, 0.032837246, 0.9990344, 0.17748773, -0.39672092, 0)
+mesh = SubResource("PrismMesh_iveb2")
+
+[node name="CSGMesh3D3" type="CSGMesh3D" parent="Salles/DrapeauChine2/Etoile4" unique_id=693426786]
+transform = Transform3D(0.68521315, -0.7283164, -0.006194938, -0.72832453, -0.6852313, 0.0012439291, -0.005150903, 0.0036594719, -0.9999802, -0.14732873, -0.39672092, 0)
+mesh = SubResource("PrismMesh_iveb2")
+
+[node name="CSGMesh3D4" type="CSGMesh3D" parent="Salles/DrapeauChine2/Etoile4" unique_id=341557035]
+transform = Transform3D(-0.4496391, -0.8927276, 0.029362753, -0.8931771, 0.4496632, -0.0061507244, -0.0077124536, -0.028991804, -0.99955004, -0.23144823, -0.1307782, 0)
+mesh = SubResource("PrismMesh_iveb2")
+
+[node name="CSGMesh3D5" type="CSGMesh3D" parent="Salles/DrapeauChine2/Etoile4" unique_id=1358929648]
+transform = Transform3D(0.39982578, 0.91659075, -0.0008356422, -0.91614085, 0.3996006, -0.031705435, -0.028727002, 0.013442261, 0.99949706, 0.27284682, -0.1307782, 0)
+mesh = SubResource("PrismMesh_iveb2")
+
+[node name="Etoile5" type="CSGCombiner3D" parent="Salles/DrapeauChine2" unique_id=669331532]
+transform = Transform3D(0.40000054, 0, 1.0244548e-08, 0, 0.4, 0, -1.0244548e-08, 0, 0.40000054, 1.9200935, 1.2871475, -0.09392166)
+
+[node name="CSGMesh3D" type="CSGMesh3D" parent="Salles/DrapeauChine2/Etoile5" unique_id=328721310]
+mesh = SubResource("PrismMesh_iveb2")
+
+[node name="CSGMesh3D2" type="CSGMesh3D" parent="Salles/DrapeauChine2/Etoile5" unique_id=1589095798]
+transform = Transform3D(-0.6846104, 0.7275849, -0.04391673, -0.7283245, -0.68523127, 0.0012439364, -0.029188033, 0.032837246, 0.9990344, 0.17748773, -0.39672092, 0)
+mesh = SubResource("PrismMesh_iveb2")
+
+[node name="CSGMesh3D3" type="CSGMesh3D" parent="Salles/DrapeauChine2/Etoile5" unique_id=1131972123]
+transform = Transform3D(0.68521315, -0.7283164, -0.006194938, -0.72832453, -0.6852313, 0.0012439291, -0.005150903, 0.0036594719, -0.9999802, -0.14732873, -0.39672092, 0)
+mesh = SubResource("PrismMesh_iveb2")
+
+[node name="CSGMesh3D4" type="CSGMesh3D" parent="Salles/DrapeauChine2/Etoile5" unique_id=1603402568]
+transform = Transform3D(-0.4496391, -0.8927276, 0.029362753, -0.8931771, 0.4496632, -0.0061507244, -0.0077124536, -0.028991804, -0.99955004, -0.23144823, -0.1307782, 0)
+mesh = SubResource("PrismMesh_iveb2")
+
+[node name="CSGMesh3D5" type="CSGMesh3D" parent="Salles/DrapeauChine2/Etoile5" unique_id=198828468]
+transform = Transform3D(0.39982578, 0.91659075, -0.0008356422, -0.91614085, 0.3996006, -0.031705435, -0.028727002, 0.013442261, 0.99949706, 0.27284682, -0.1307782, 0)
+mesh = SubResource("PrismMesh_iveb2")
 
 [node name="PetiteRangéeServeur" type="CSGCombiner3D" parent="." unique_id=867785003]
 
@@ -1300,3 +1615,6 @@ transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -10.
 
 [node name="Serveur14" parent="DoublePetiteRangée7/PetiteRangéeServeur3" unique_id=409890389 instance=ExtResource("1_cj5kg")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -9.2, 1.987, 47.714)
+
+[node name="Serveur" parent="." unique_id=255803961 instance=ExtResource("1_cj5kg")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -42.602287, 1.9999976, 47.93406)

@@ -1,0 +1,81 @@
+[gd_scene format=3 uid="uid://cwwg6pmwdkrx7"]
+
+[sub_resource type="Animation" id="Animation_aifsj"]
+resource_name = "FadeIn"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.98),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_ns6wc"]
+resource_name = "FadeOut"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.95),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_1jtbw"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_q0cdq"]
+resource_name = "Start"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_q0cdq"]
+_data = {
+&"FadeIn": SubResource("Animation_aifsj"),
+&"FadeOut": SubResource("Animation_ns6wc"),
+&"RESET": SubResource("Animation_1jtbw"),
+&"_START": SubResource("Animation_q0cdq")
+}
+
+[node name="CanvasLayer" type="CanvasLayer" unique_id=565537606]
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=277787632]
+offset_left = -30.0
+offset_top = -30.0
+offset_right = 1186.0
+offset_bottom = 692.0
+color = Color(0, 0, 0, 1)
+
+[node name="FadeAnimationPlayer" type="AnimationPlayer" parent="." unique_id=2099754274]
+libraries/ = SubResource("AnimationLibrary_q0cdq")

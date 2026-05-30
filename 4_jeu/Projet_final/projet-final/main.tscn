@@ -1,8 +1,11 @@
 [gd_scene format=3 uid="uid://biw1ex41tk5tf"]
 
 [ext_resource type="PackedScene" uid="uid://bkorafkskqvlk" path="res://data_center.tscn" id="1_0xm2m"]
-[ext_resource type="PackedScene" uid="uid://bs72ogkvdd7d6" path="res://addons/proto_controller2/proto_controller.tscn" id="2_h2yge"]
-[ext_resource type="PackedScene" uid="uid://bwfdlp85pb0ep" path="res://serveur.tscn" id="3_h2yge"]
+[ext_resource type="PackedScene" uid="uid://cwwg6pmwdkrx7" path="res://FadeOverlay.tscn" id="2_7mycd"]
+[ext_resource type="PackedScene" uid="uid://bs72ogkvdd7d6" path="res://addons/proto_controller2/Player.tscn" id="2_h2yge"]
+[ext_resource type="PackedScene" uid="uid://dvrrmmj0ggotw" path="res://plateforme.tscn" id="4_1bvp3"]
+[ext_resource type="PackedScene" uid="uid://brys2yeqadfyt" path="res://neurone.tscn" id="5_lquwl"]
+[ext_resource type="PackedScene" uid="uid://wc1v6xirj0o1" path="res://transition_histoire.tscn" id="6_7mycd"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_0xm2m"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -21,7 +24,7 @@ glow_enabled = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 20.587978, 0)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1270319367]
-transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 27.193905, 0)
+transform = Transform3D(-0.7930114, -0.5974476, -0.119118825, -0.058698058, -0.11968809, 0.9910748, -0.60637224, 0.7929258, 0.05984503, 43.445053, 231.40045, 0)
 shadow_enabled = true
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=494163163]
@@ -29,9 +32,25 @@ environment = SubResource("Environment_1bvp3")
 
 [node name="ProtoController" parent="." unique_id=2021529420 instance=ExtResource("2_h2yge")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -33.811935, 3.2610092, 44.559593)
+[node name="Player" parent="." unique_id=2021529420 instance=ExtResource("2_h2yge")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 116.02105, -11.539162, -93.846436)
+
+[node name="CanvasLayer" parent="Player" unique_id=565537606 instance=ExtResource("2_7mycd")]
 
 [node name="DataCenter" parent="." unique_id=683001788 instance=ExtResource("1_0xm2m")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.10746539, 0, -1.2144728)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4483627, -0.23155785, -1.7449522)
 
-[node name="Serveur" parent="." unique_id=907864642 instance=ExtResource("3_h2yge")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.969313, 1.7499924, 10.215578)
+[node name="Plateforme" parent="." unique_id=146931932 instance=ExtResource("4_1bvp3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 302.84067, -22.73634, -134.19325)
+
+[node name="Neurone" parent="." unique_id=1044392086 instance=ExtResource("5_lquwl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 116.80904, -11.163494, -101.1951)
+
+[node name="TransitionHistoire" parent="." unique_id=943188433 instance=ExtResource("6_7mycd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.523209, -15.031807, -80.9348)
+
+[node name="TeleportPoint1" type="Marker3D" parent="." unique_id=1466745411]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.562681, -12.870675, -58.308445)
+
+[node name="TeleportPoint2" type="Marker3D" parent="." unique_id=1694336254]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -44.20967, 1.8352013, 43.7911)

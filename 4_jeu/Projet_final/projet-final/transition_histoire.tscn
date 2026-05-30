@@ -1,0 +1,237 @@
+[gd_scene format=3 uid="uid://wc1v6xirj0o1"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_dxml1"]
+size = Vector3(10, 1, 28)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_h42pk"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dxml1"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nb4id"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mwiqi"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mnao4"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uh5lv"]
+albedo_color = Color(1, 0, 0, 1)
+
+[sub_resource type="Animation" id="Animation_dxml1"]
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Alarme/OmniLight3D:light_energy")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [7.484]
+}
+
+[sub_resource type="Animation" id="Animation_nb4id"]
+resource_name = "alarme_animation"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Alarme/OmniLight3D:light_energy")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.3, 0.73333335, 1.2, 1.6333333),
+"transitions": PackedFloat32Array(0.43527544, 0.3660217, 0.5, 0.15932031),
+"update": 0,
+"values": [3.159, 11.88, 3.159, 11.88]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_mwiqi"]
+_data = {
+&"RESET": SubResource("Animation_dxml1"),
+&"alarme_animation": SubResource("Animation_nb4id")
+}
+
+[node name="TransitionHistoire" type="Node3D" unique_id=943188433]
+
+[node name="Sol" type="StaticBody3D" parent="." unique_id=1871768716]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 10.516113)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Sol" unique_id=1503864042]
+shape = SubResource("BoxShape3D_dxml1")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Sol/CollisionShape3D" unique_id=1477457722]
+size = Vector3(10, 1, 28)
+material = SubResource("StandardMaterial3D_h42pk")
+
+[node name="Plafond" type="CSGBox3D" parent="." unique_id=1739298310]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9.837492, 10.579346)
+use_collision = true
+size = Vector3(10, 1, 28.841309)
+material = SubResource("StandardMaterial3D_dxml1")
+
+[node name="LongMur" type="CSGBox3D" parent="." unique_id=2094361216]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.30766, 4.486286, 10.532928)
+use_collision = true
+size = Vector3(1, 10, 28.934143)
+material = SubResource("StandardMaterial3D_nb4id")
+
+[node name="LongMur2" type="CSGBox3D" parent="." unique_id=1058040795]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.449174, 4.486286, 10.954132)
+use_collision = true
+size = Vector3(1, 10, 28.091736)
+material = SubResource("StandardMaterial3D_mwiqi")
+
+[node name="PetitMur" type="CSGBox3D" parent="." unique_id=2060086123]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.4307933, 25.097092)
+use_collision = true
+size = Vector3(11, 10, 1)
+material = SubResource("StandardMaterial3D_mnao4")
+
+[node name="PetitMur2" type="CSGBox3D" parent="." unique_id=1249735912]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.4307933, -3.5016973)
+use_collision = true
+size = Vector3(11, 10, 1)
+material = SubResource("StandardMaterial3D_mnao4")
+
+[node name="Label3D" type="Label3D" parent="." unique_id=1469711390]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 19.221)
+text = "ALERTE
+Chute drastique des scores des benchmarks"
+
+[node name="Fond" type="CSGBox3D" parent="Label3D" unique_id=783373934]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.07513809)
+size = Vector3(3.5, 1, 0.1)
+
+[node name="Label3D2" type="Label3D" parent="." unique_id=860179593]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 16.74)
+text = "ALERTE
+Intrusion dans le data center"
+
+[node name="Fond" type="CSGBox3D" parent="Label3D2" unique_id=885128533]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.07513809)
+size = Vector3(3.5, 1, 0.1)
+
+[node name="Label3D3" type="Label3D" parent="." unique_id=1992747446]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 13.973)
+text = "Interruption de l'entraînement du LLM"
+
+[node name="Fond" type="CSGBox3D" parent="Label3D3" unique_id=444883544]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.07513809)
+size = Vector3(3.5, 1, 0.1)
+
+[node name="Label3D4" type="Label3D" parent="." unique_id=167807889]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 10.434)
+text = "\"Il faut que j'aille voir ce qu'il se passe\""
+
+[node name="Fond" type="CSGBox3D" parent="Label3D4" unique_id=51861148]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.07513809)
+size = Vector3(3.5, 1, 0.1)
+
+[node name="Label3D5" type="Label3D" parent="." unique_id=385196327]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 7.346)
+text = "\"Est-ce que c'est un espion américain ? 
+A-t-il été envoyé par Musk ?\""
+
+[node name="Fond" type="CSGBox3D" parent="Label3D5" unique_id=1065124623]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.07513809)
+size = Vector3(3.5, 1, 0.1)
+
+[node name="Label3D6" type="Label3D" parent="." unique_id=1582947463]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 3.647)
+text = "\"Qu'est-ce qui a été touché dans la salle des serveurs ?\""
+
+[node name="Fond" type="CSGBox3D" parent="Label3D6" unique_id=392212500]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.018798828, 0, -0.07513809)
+size = Vector3(4.383301, 1, 0.1)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="." unique_id=1497092759]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 6.5587234, 1.631958)
+light_color = Color(1, 0, 0, 1)
+light_energy = 16.0
+spot_range = 7.747378
+spot_attenuation = -0.68
+spot_angle = 39.30897
+
+[node name="SpotLight3D2" type="SpotLight3D" parent="." unique_id=1057642528]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 6.5587234, 11.075971)
+light_color = Color(1, 0, 0, 1)
+light_energy = 16.0
+spot_range = 7.747378
+spot_attenuation = -0.68
+spot_angle = 39.30897
+
+[node name="SpotLight3D3" type="SpotLight3D" parent="." unique_id=497761405]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 6.5587234, 19.795345)
+light_color = Color(1, 0, 0, 1)
+light_energy = 16.0
+spot_range = 7.747378
+spot_attenuation = -0.68
+spot_angle = 39.30897
+
+[node name="Alarme" type="CSGCylinder3D" parent="." unique_id=747014517]
+transform = Transform3D(-4.371139e-08, -1.0000001, 0, 1, -4.3711392e-08, 0, 0, 0, 1.0000001, -4.4338493, 4.2550497, 15.746667)
+height = 0.21435547
+material = SubResource("StandardMaterial3D_uh5lv")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Alarme" unique_id=160593554]
+transform = Transform3D(1, -3.5527137e-15, 0, 3.5527137e-15, 0.9999999, 0, 0, 0, 0.9999999, 0, -0.14029837, 0)
+light_color = Color(1, 0, 0, 1)
+light_energy = 7.484
+omni_range = 3.7241611
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Alarme/OmniLight3D" unique_id=967367805]
+root_node = NodePath("../../..")
+libraries/ = SubResource("AnimationLibrary_mwiqi")
+
+[node name="Alarme4" type="CSGCylinder3D" parent="." unique_id=124017042]
+transform = Transform3D(4.371139e-08, 1.0000001, -8.7422784e-08, 1, -4.3711392e-08, 0, -3.821371e-15, -8.7422784e-08, -1.0000001, 4.900134, 4.2550497, 15.746667)
+height = 0.21435547
+material = SubResource("StandardMaterial3D_uh5lv")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Alarme4" unique_id=1002914538]
+transform = Transform3D(1, -3.5527137e-15, 0, 3.5527137e-15, 0.9999999, 0, 0, 0, 0.9999999, 0, -0.14029837, 0)
+light_color = Color(1, 0, 0, 1)
+light_energy = 11.88
+omni_range = 3.7241611
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Alarme4/OmniLight3D" unique_id=2087952984]
+root_node = NodePath("../../..")
+libraries/ = SubResource("AnimationLibrary_mwiqi")
+
+[node name="Alarme2" type="CSGCylinder3D" parent="." unique_id=393528862]
+transform = Transform3D(-4.371139e-08, -1.0000001, 0, 1, -4.3711392e-08, 0, 0, 0, 1.0000001, -4.4338493, 4.2550497, 5.7099905)
+height = 0.21435547
+material = SubResource("StandardMaterial3D_uh5lv")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Alarme2" unique_id=475032147]
+transform = Transform3D(1, -3.5527137e-15, 0, 3.5527137e-15, 0.9999999, 0, 0, 0, 0.9999999, 0, -0.14029837, 0)
+light_color = Color(1, 0, 0, 1)
+light_energy = 11.88
+omni_range = 3.7241611
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Alarme2/OmniLight3D" unique_id=613024733]
+root_node = NodePath("../../..")
+libraries/ = SubResource("AnimationLibrary_mwiqi")
+
+[node name="Alarme3" type="CSGCylinder3D" parent="." unique_id=1287803096]
+transform = Transform3D(4.371139e-08, 1.0000001, -8.7422784e-08, 1, -4.3711392e-08, 0, -3.821371e-15, -8.7422784e-08, -1.0000001, 4.885334, 4.2550497, 5.7099905)
+height = 0.21435547
+material = SubResource("StandardMaterial3D_uh5lv")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Alarme3" unique_id=389781615]
+transform = Transform3D(1, -3.5527137e-15, 0, 3.5527137e-15, 0.9999999, 0, 0, 0, 0.9999999, 0, -0.14029837, 0)
+light_color = Color(1, 0, 0, 1)
+light_energy = 11.88
+omni_range = 3.7241611
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Alarme3/OmniLight3D" unique_id=1987927577]
+root_node = NodePath("../../..")
+libraries/ = SubResource("AnimationLibrary_mwiqi")
